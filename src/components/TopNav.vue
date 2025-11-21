@@ -11,8 +11,7 @@
       </button>
     </router-link>
     <button class="text-gray-400 hover:text-yellow-400">Portfolio</button>
-    <button class="text-gray-400 hover:text-yellow-400">Blog</button>
-    <button class="text-gray-400 hover:text-yellow-400">Github</button>
+
   </nav>
 </template>
 
