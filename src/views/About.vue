@@ -26,8 +26,6 @@
           Portfolio
         </button>
       </router-link>
-
-      
     </nav>
 
     <!-- Main Container -->
@@ -35,7 +33,7 @@
       <!-- Title -->
       <div class="mb-8 md:mb-12">
         <h1 class="font-poppins font-semibold text-[32px] text-[#FAFAFA] leading-normal">
-          About Me
+          About
         </h1>
         <div class="h-1 w-12 bg-yellow-400 mt-2 rounded"></div>
       </div>
@@ -78,12 +76,12 @@
           <ServiceCard
             icon="fa-mobile-alt"
             title="Virtual Assistant"
-            description="Professional development of applications for iOS and Android."
+            description="Providing administrative support, scheduling, and task management to streamline your workflow."
           />
           <ServiceCard
             icon="fa-camera"
-            title="Youtube Editor"
-            description="I make high-quality photos of any category at a professional level."
+            title="YouTube Automation"
+            description="Automating video uploads, scheduling, and channel management to grow your YouTube presence efficiently."
           />
         </div>
       </section>
@@ -91,8 +89,11 @@
       <!-- My Tools -->
       <section>
         <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8">My Tools</h2>
-        <div class="text-gray-300">
-          <!-- Add Tools here -->
+
+        <div class="flex flex-wrap gap-4 text-gray-300">
+          <div v-for="tool in tools" :key="tool.name" class="flex flex-col items-center">
+            <img :src="tool.img" alt="" class="h-12 md:h-16 w-auto object-contain" />
+          </div>
         </div>
       </section>
     </div>
@@ -101,4 +102,25 @@
 
 <script setup>
 import ServiceCard from "../components/ServiceCard.vue";
+
+const tools = [
+  { img: "/src/assets/my-tools/vscode.png" },
+  { img: "/src/assets/my-tools/html.png" },
+  { img: "/src/assets/my-tools/css3.jpg" },
+  { img: "/src/assets/my-tools/javascript.png" },
+  { img: "/src/assets/my-tools/vuejs.png" },
+  { img: "/src/assets/my-tools/vue.png" },
+  { img: "/src/assets/my-tools/tailwind.png" },
+  { img: "/src/assets/my-tools/figma.png" },
+  { img: "/src/assets/my-tools/git.png" },
+  { img: "/src/assets/my-tools/php.png" },
+  { img: "/src/assets/my-tools/laravel.png" },
+  { img: "/src/assets/my-tools/mysql.png" },
+  { img: "/src/assets/my-tools/postgre.png" },
+  { img: "/src/assets/my-tools/oracle.png" },
+  { img: "/src/assets/my-tools/premiere-pro.png" },
+  { img: "/src/assets/my-tools/photoshop.png" },
+  { img: "/src/assets/my-tools/sonyvegas.png" },
+  { img: "/src/assets/my-tools/youtube.png" },
+];
 </script>

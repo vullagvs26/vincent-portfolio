@@ -13,14 +13,16 @@
 
     <!-- Name -->
     <h2 class="text-xl md:text-2xl font-bold mt-4 text-center">Vincent Vullag</h2>
-    <p class="text-gray-400 text-xs md:text-sm text-center">
-      Programmer • Youtube Editor
-    </p>
 
     <div
       class="mt-3 bg-[#2a2a2a] px-4 py-1 rounded-lg border border-gray-700 text-xs md:text-sm"
     >
       Web Developer
+    </div>
+    <div
+      class="mt-3 bg-[#2a2a2a] px-4 py-1 rounded-lg border border-gray-700 text-xs md:text-sm"
+    >
+      Video Editor
     </div>
 
     <!-- Divider -->
@@ -88,16 +90,26 @@
     </div>
 
     <!-- Footer icons -->
-    <div class="flex space-x-4 mt-auto pt-6">
-      <i
-        class="fab fa-twitter text-gray-500 hover:text-yellow-400 cursor-pointer text-sm md:text-base"
-      ></i>
-      <i
-        class="fab fa-instagram text-gray-500 hover:text-yellow-400 cursor-pointer text-sm md:text-base"
-      ></i>
-      <i
-        class="fas fa-flag text-gray-500 hover:text-yellow-400 cursor-pointer text-sm md:text-base"
-      ></i>
+    <div class="flex items-center gap-3 mt-auto pt-6">
+      <!-- TikTok -->
+      <div class="h-5 w-5 md:h-6 md:w-6 flex items-center justify-center">
+        <i
+          class="fab fa-facebook text-gray-500 cursor-pointer text-[1rem] md:text-[1.2rem] transition-colors duration-300 hover:text-[#1877F2]"
+        ></i>
+      </div>
+
+      <!-- Instagram -->
+      <div class="h-5 w-5 md:h-6 md:w-6 flex items-center justify-center">
+        <i
+          class="fab fa-instagram text-gray-500 cursor-pointer text-[1rem] md:text-[1.2rem] transition-all duration-300 hover:text-transparent hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#D62976] hover:to-[#4F5BD5] hover:bg-clip-text"
+        ></i>
+      </div>
+
+      <!-- Philippine Flag -->
+      <img
+        src="/src/assets/ph.png"
+        class="h-5 w-5 md:h-6 md:w-6 rounded-full shadow-md hover:scale-110 transition transform"
+      />
     </div>
   </aside>
 </template>
