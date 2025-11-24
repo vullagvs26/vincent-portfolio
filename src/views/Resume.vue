@@ -38,6 +38,20 @@
         <div class="h-1 w-12 md:w-16 bg-yellow-400 mt-2 rounded"></div>
       </div>
 
+      <!-- Experience Section -->
+      <section class="mt-8 md:mt-12 mb-12 md:mb-20">
+        <h2
+          class="text-2xl md:text-3xl font-semibold mb-6 md:mb-8 flex items-center gap-2 md:gap-3"
+        >
+          <i class="fas fa-rocket text-yellow-400 text-lg md:text-2xl"></i>
+          Experience
+        </h2>
+
+        <div class="space-y-6 md:space-y-8">
+          <ResumeCard v-for="item in experience" :key="item.title" :item="item" />
+        </div>
+      </section>
+
       <!-- Education Section -->
       <section class="mt-8 md:mt-12">
         <h2
@@ -50,20 +64,6 @@
         <!-- Timeline -->
         <div class="space-y-6 md:space-y-8">
           <ResumeCard v-for="item in education" :key="item.title" :item="item" />
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section class="mt-8 md:mt-12 mb-12 md:mb-20">
-        <h2
-          class="text-2xl md:text-3xl font-semibold mb-6 md:mb-8 flex items-center gap-2 md:gap-3"
-        >
-          <i class="fas fa-rocket text-yellow-400 text-lg md:text-2xl"></i>
-          Experience
-        </h2>
-
-        <div class="space-y-6 md:space-y-8">
-          <ResumeCard v-for="item in experience" :key="item.title" :item="item" />
         </div>
       </section>
     </div>
@@ -89,9 +89,19 @@ const education = [
 
 const experience = [
   {
-    title: "IT Staff @ Fujitsu",
-    date: "2024 — Present",
-    description: "Supporting press section systems and building digital tools.",
+    title: "System Developer @ Fujitsu",
+    date: "June 2024 — Present · 1 yr 6 mos",
+    description:
+      "Developing and maintaining manufacturing and business systems, analyzing technical requirements, coding and testing, troubleshooting issues, maintaining databases and system documentation, providing technical support and end-user training, and ensuring system security and performance. Also supports IT improvements, system upgrades, and compliance with QMS, EMS, CSR, and safety regulations.",
+
+    logo: "/src/assets/fujitsu.png",
+  },
+
+  {
+    title: "System Developer @ Fujitsu",
+    date: "June 2024 — Present · 1 yr 6 mos",
+    description:
+      "Developing and maintaining manufacturing and business systems, analyzing technical requirements, coding and testing, troubleshooting issues, maintaining databases and system documentation, providing technical support and end-user training, and ensuring system security and performance. Also supports IT improvements, system upgrades, and compliance with QMS, EMS, CSR, and safety regulations.",
   },
 ];
 </script>

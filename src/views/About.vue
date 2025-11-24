@@ -29,7 +29,9 @@
     </nav>
 
     <!-- Main Container -->
-    <div class="bg-[#1E1E1F] border border-[#383838] rounded-2xl p-6 md:p-10">
+    <div
+      class="bg-[#1E1E1F] border border-[#383838] rounded-2xl p-6 md:p-10 shadow-[0_10px_15px_rgba(0,0,0,0.5)]"
+    >
       <!-- Title -->
       <div class="mb-8 md:mb-12">
         <h1 class="font-poppins font-semibold text-[32px] text-[#FAFAFA] leading-normal">
@@ -53,8 +55,7 @@
         </p>
 
         <p class="text-base md:text-lg text-gray-300 leading-relaxed">
-          When I'm not coding, you can find me exploring new technologies or contributing
-          to open-source projects.
+          When I'm not coding, you can find me exploring new technologies or doing some video for youtube.
         </p>
       </section>
 

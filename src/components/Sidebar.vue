@@ -101,7 +101,7 @@
       <!-- Instagram -->
       <div class="h-5 w-5 md:h-6 md:w-6 flex items-center justify-center">
         <i
-          class="fab fa-instagram text-gray-500 cursor-pointer text-[1rem] md:text-[1.2rem] transition-all duration-300 hover:text-transparent hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#D62976] hover:to-[#4F5BD5] hover:bg-clip-text"
+          class="fab fa-instagram text-gray-500 cursor-pointer text-[1rem] md:text-[1.2rem] transition-all duration-300 hover:text-transparent hover:bg-linear-to-tr hover:from-[#F58529] hover:via-[#D62976] hover:to-[#4F5BD5] hover:bg-clip-text"
         ></i>
       </div>
 
