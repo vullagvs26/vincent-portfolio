@@ -18,13 +18,17 @@
           Resume
         </button>
       </router-link>
-      <button class="text-gray-400 hover:text-yellow-400 hidden sm:block">
-        Portfolio
-      </button>
+      <router-link to="/portfolio" v-slot="{ isActive }">
+        <button
+          :class="isActive ? 'text-yellow-400' : 'text-gray-400 hover:text-yellow-400'"
+        >
+          Portfolio
+        </button>
+      </router-link>
     </nav>
 
     <!-- Main Container with background and border -->
-    <div class="bg-[#1E1E1F] border border-[#383838] rounded-2xl p-6 md:p-10 ">
+    <div class="bg-[#1E1E1F] border border-[#383838] rounded-2xl p-6 md:p-10">
       <!-- Page Title -->
       <div class="mb-8 md:mb-12">
         <h1 class="text-3xl md:text-5xl font-bold flex items-center gap-2 md:gap-3">

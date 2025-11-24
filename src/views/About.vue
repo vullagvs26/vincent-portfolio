@@ -19,8 +19,15 @@
           Resume
         </button>
       </router-link>
+      <router-link to="/portfolio" v-slot="{ isActive }">
+        <button
+          :class="isActive ? 'text-yellow-400' : 'text-gray-400 hover:text-yellow-400'"
+        >
+          Portfolio
+        </button>
+      </router-link>
 
-      <button class="text-gray-400 hover:text-yellow-400">Portfolio</button>
+      
     </nav>
 
     <!-- Main Container -->
@@ -70,22 +77,22 @@
           />
           <ServiceCard
             icon="fa-mobile-alt"
-            title="Mobile Apps"
+            title="Virtual Assistant"
             description="Professional development of applications for iOS and Android."
           />
           <ServiceCard
             icon="fa-camera"
-            title="Youtube"
+            title="Youtube Editor"
             description="I make high-quality photos of any category at a professional level."
           />
         </div>
       </section>
 
-      <!-- Testimonials -->
+      <!-- My Tools -->
       <section>
-        <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Testimonials</h2>
+        <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8">My Tools</h2>
         <div class="text-gray-300">
-          <!-- Add testimonials here -->
+          <!-- Add Tools here -->
         </div>
       </section>
     </div>

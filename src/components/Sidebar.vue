@@ -30,47 +30,61 @@
     <div
       class="w-full space-y-4 text-xs md:text-sm flex flex-col items-center md:items-center lg:items-start"
     >
-      <div class="flex items-center space-x-3">
-        <span class="bg-yellow-500/20 p-2 rounded-lg flex-shrink-0">
-          <i class="fas fa-envelope text-yellow-500 text-sm md:text-base"></i>
-        </span>
-        <span class="text-gray-300 truncate">vincentvullag@gmail.com</span>
-      </div>
-
-      <div class="flex items-center space-x-3">
-        <span class="bg-orange-500/20 p-2 rounded-lg flex-shrink-0">
-          <i class="fab fa-github text-orange-500 text-sm md:text-base"></i>
-        </span>
-        <a
-          class="text-orange-300 truncate underline"
-          href="https://github.com/vullagvs26"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub profile"
-          >https://github.com/vullagvs26</a
+      <a href="mailto:vincentvullag@gmail.com" class="block">
+        <div
+          class="flex items-center space-x-3 cursor-pointer p-2 rounded-lg hover:bg-yellow-500/20 transition"
         >
-      </div>
+          <span class="bg-yellow-500/20 p-2 rounded-lg shrink-0">
+            <i class="fas fa-envelope text-yellow-500 text-sm md:text-base"></i>
+          </span>
+          <span class="text-gray-300 truncate">vincentvullag@gmail.com</span>
+        </div>
+      </a>
 
-      <div class="flex items-center space-x-3">
-        <span class="bg-blue-500/20 p-2 rounded-lg flex-shrink-0">
-          <i class="fab fa-linkedin text-blue-500 text-sm md:text-base"></i>
-        </span>
-        <a
-          class="text-blue-300 truncate underline"
-          href="https://linkedin.com/in/vullagvs26"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub profile"
-          >https://github.com/vullagvs26</a
+      <a
+        href="https://github.com/vullagvs26"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub profile"
+        class="block"
+      >
+        <div
+          class="flex items-center space-x-3 cursor-pointer p-2 rounded-lg hover:bg-orange-500/20 transition"
         >
-      </div>
+          <span class="bg-orange-500/20 p-2 rounded-lg shrink-0">
+            <i class="fab fa-github text-orange-500 text-sm md:text-base"></i>
+          </span>
+          <span class="truncate">vullagvs26</span>
+        </div>
+      </a>
 
-      <div class="flex items-center space-x-3">
-        <span class="bg-red-500/20 p-2 rounded-lg flex-shrink-0">
-          <i class="fas fa-location-crosshairs text-red-500 text-sm md:text-base"></i>
-        </span>
-        <span class="text-gray-300 truncate">Calamba, Laguna</span>
-      </div>
+      <a
+        href="https://linkedin.com/in/vullagvincent"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn profile"
+        class="block"
+      >
+        <div
+          class="flex items-center space-x-3 cursor-pointer p-2 rounded-lg hover:bg-blue-500/20 transition"
+        >
+          <span class="bg-blue-500/20 p-2 rounded-lg shrink-0">
+            <i class="fab fa-linkedin text-blue-500 text-sm md:text-base"></i>
+          </span>
+          <span class="truncate">vullagvincent</span>
+        </div>
+      </a>
+
+      <a href="https://maps.app.goo.gl/29G2WACXWX9gcyFR9" target="_blank" class="block">
+        <div
+          class="flex items-center space-x-3 cursor-pointer p-2 rounded-lg hover:bg-red-500/20 transition"
+        >
+          <span class="bg-red-500/20 p-2 rounded-lg shrink-0">
+            <i class="fas fa-location-crosshairs text-red-500 text-sm md:text-base"></i>
+          </span>
+          <span class="text-gray-300 truncate">Calamba, Laguna</span>
+        </div>
+      </a>
     </div>
 
     <!-- Footer icons -->
