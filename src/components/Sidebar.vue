@@ -3,7 +3,7 @@
     class="w-full lg:w-[280px] bg-[#1E1E1F] rounded-2xl p-6 flex flex-col items-center shadow-xl lg:sticky lg:top-6 lg:h-fit border border-[#383838]"
   >
     <!-- Avatar -->
-    <div class="bg-[#333333] p-4 mt-10 rounded-2xl">
+    <div class="bg-[#333333] p-4 mt-10 rounded-4xl">
       <img
         src="../assets/avatar.png"
         class="w-24 md:w-32 h-24 md:h-32 rounded-2xl object-cover"
@@ -12,21 +12,23 @@
     </div>
 
     <!-- Name -->
-    <h2 class="text-xl md:text-2xl font-bold mt-4 text-center">Vincent Vullag</h2>
+    <h2 class="text-2xl font-medium text-white leading-normal mt-4 text-center">
+      Vincent Vullag
+    </h2>
 
     <div
-      class="mt-3 bg-[#2a2a2a] px-4 py-1 rounded-lg border border-gray-700 text-xs md:text-sm"
+      class="mt-3 bg-[#2a2a2a] px-4 py-1 rounded-lg  text-xs md:text-sm"
     >
       Web Developer
     </div>
     <div
-      class="mt-3 bg-[#2a2a2a] px-4 py-1 rounded-lg border border-gray-700 text-xs md:text-sm"
+      class="mt-3 bg-[#2a2a2a] px-4 py-1 rounded-lg  text-xs md:text-sm"
     >
       Video Editor
     </div>
 
     <!-- Divider -->
-    <div class="my-6 w-full border-t border-gray-700"></div>
+    <div class="my-6 w-full border-t border-[#383838]"></div>
 
     <!-- Contact items -->
     <div
@@ -91,25 +93,44 @@
 
     <!-- Footer icons -->
     <div class="flex items-center gap-3 mt-auto pt-6">
-      <!-- TikTok -->
-      <div class="h-5 w-5 md:h-6 md:w-6 flex items-center justify-center">
-        <i
-          class="fab fa-facebook text-gray-500 cursor-pointer text-[1rem] md:text-[1.2rem] transition-colors duration-300 hover:text-[#1877F2]"
-        ></i>
-      </div>
+      <!-- Facebook -->
+      <a
+        href="https://www.facebook.com/share/1FLxv7xJJo/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="h-5 w-5 md:h-6 md:w-6 flex items-center justify-center">
+          <i
+            class="fab fa-facebook text-gray-500 cursor-pointer text-[1rem] md:text-[1.2rem] transition-colors duration-300 hover:text-[#1877F2]"
+          ></i>
+        </div>
+      </a>
 
       <!-- Instagram -->
-      <div class="h-5 w-5 md:h-6 md:w-6 flex items-center justify-center">
-        <i
-          class="fab fa-instagram text-gray-500 cursor-pointer text-[1rem] md:text-[1.2rem] transition-all duration-300 hover:text-transparent hover:bg-linear-to-tr hover:from-[#F58529] hover:via-[#D62976] hover:to-[#4F5BD5] hover:bg-clip-text"
-        ></i>
-      </div>
+      <a
+        href="https://www.instagram.com/vullag.v?igsh=NTlqOGZneTNuem80&utm_source=qr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="h-5 w-5 md:h-6 md:w-6 flex items-center justify-center">
+          <i
+            class="fab fa-instagram text-gray-500 cursor-pointer text-[1rem] md:text-[1.2rem] transition-all duration-300 hover:text-transparent hover:bg-linear-to-tr hover:from-[#F58529] hover:via-[#D62976] hover:to-[#4F5BD5] hover:bg-clip-text"
+          ></i>
+        </div>
+      </a>
 
       <!-- Philippine Flag -->
-      <img
-        src="/src/assets/ph.png"
-        class="h-5 w-5 md:h-6 md:w-6 rounded-full shadow-md hover:scale-110 transition transform"
-      />
+      <a
+        href="https://maps.app.goo.gl/CPLsNaTCSe158QN37"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/src/assets/ph.png"
+          alt="Philippines"
+          class="h-5 w-5 md:h-6 md:w-6 rounded-full shadow-md hover:scale-110 transition transform"
+        />
+      </a>
     </div>
   </aside>
 </template>

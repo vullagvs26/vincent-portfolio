@@ -1,17 +1,23 @@
 <template>
-  <div class="relative pl-10 border-l border-gray-700">
-    <!-- Yellow dot -->
+  <div class="relative pl-10 border-l border-[#383838]">
+     <!-- dot -->
     <span
-      class="w-3 h-3 bg-yellow-500 rounded-full absolute -left-[7px] top-1"
+      class="w-3 h-3  rounded-full absolute -left-[7px] top-1"
+      style="background: linear-gradient(90deg, #ffda6f, #ffbc5c)"
     ></span>
-
-    <h3 class="text-xl font-semibold">{{ item.title }}</h3>
-    <p class="text-yellow-400 font-medium">{{ item.date }}</p>
-    <p class="mt-2 text-gray-300 leading-relaxed">
+    <h3 class="font-semibold text-[16px] text-white leading-normal">
+      {{ item.title }}
+    </h3>
+    <p class="font-normal text-[15px] leading-6 text-[rgb(206,177,90)]">
+      {{ item.date }}
+    </p>
+    <p class="font- font-light text-[15px] leading-6 text-[rgb(214,214,214)] mt-2">
       {{ item.description }}
     </p>
   </div>
 </template>
+
+
 
 <script setup>
 defineProps({

@@ -6,7 +6,7 @@
     >
       <router-link to="/" v-slot="{ isActive }">
         <button
-          :class="isActive ? 'text-yellow-400' : 'text-gray-400 hover:text-yellow-400'"
+          :class="isActive ? 'text-[rgb(255,219,112)]' : 'text-gray-400 hover:text-[rgb(255,219,112)]'"
         >
           About
         </button>
@@ -14,14 +14,14 @@
 
       <router-link to="/resume" v-slot="{ isActive }">
         <button
-          :class="isActive ? 'text-yellow-400' : 'text-gray-400 hover:text-yellow-400'"
+          :class="isActive ? 'text-[rgb(255,219,112)]' : 'text-gray-400 hover:text-[rgb(255,219,112)]'"
         >
           Resume
         </button>
       </router-link>
       <router-link to="/portfolio" v-slot="{ isActive }">
         <button
-          :class="isActive ? 'text-yellow-400' : 'text-gray-400 hover:text-yellow-400'"
+          :class="isActive ? 'text-[rgb(255,219,112)]' : 'text-gray-400 hover:text-[rgb(255,219,112)]'"
         >
           Portfolio
         </button>
@@ -33,36 +33,35 @@
       class="bg-[#1E1E1F] border border-[#383838] rounded-2xl p-6 md:p-10 shadow-[0_10px_15px_rgba(0,0,0,0.5)]"
     >
       <!-- Title -->
-      <div class="mb-8 md:mb-12">
-        <h1 class="font-poppins font-semibold text-[32px] text-[#FAFAFA] leading-normal">
-          About
-        </h1>
-        <div class="h-1 w-12 bg-yellow-400 mt-2 rounded"></div>
+      <div class="mb-6 md:mb-6">
+        <h1 class="font-semibold text-[32px] text-[#FAFAFA] leading-normal">About</h1>
+       <div
+          class="h-1 w-12 md:w-16 mt-2 rounded"
+          style="background: linear-gradient(90deg, #ffda6f, #ffbc5c)"
+        ></div>
       </div>
 
       <!-- About Content -->
-      <section class="max-w-4xl mb-12 md:mb-16">
-        <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-4 md:mb-6">
-          Hello! I'm Vincent Vullag, a passionate Web Developer with expertise in Vue.js,
-          Tailwind CSS, and modern web technologies. I love creating beautiful and
-          functional user interfaces.
+      <section class="max-w-4xl mb-4 md:mb-4">
+        <p class="text-[15px] font-light text-[#D6D6D6] leading-6 mb-4 md:mb-4">
+          Hello! I'm Vincent Vullag, a passionate Web Developer from Philippines with
+          expertise in Vue.js, Tailwind CSS, and modern web technologies. I love creating
+          beautiful and functional user interfaces.
         </p>
 
-        <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-4 md:mb-6">
+        <p class="text-[15px] font-light text-[#D6D6D6] leading-6 mb-4 md:mb-6">
           With a background in Computer Science and hands-on experience in web
           development, I'm committed to building high-quality applications that solve real
-          problems.
-        </p>
-
-        <p class="text-base md:text-lg text-gray-300 leading-relaxed">
-          When I'm not coding, you can find me exploring new technologies or doing some video for youtube.
+          problems. When I'm not coding, you can find me exploring new technologies or
+          doing some video for youtube.
         </p>
       </section>
 
       <!-- What I'm Doing Section -->
-      <section class="mb-12 md:mb-16">
-        <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8">What I'm Doing</h2>
-
+      <section class="mb-12 md:mb-12">
+        <h2 class="font-semibold text-[24px] text-[#FAFAFA] leading-normal mb-6 md:mb-8">
+          What I'm Doing
+        </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <ServiceCard
             icon="fa-pen-nib"
@@ -89,7 +88,9 @@
 
       <!-- My Tools -->
       <section>
-        <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8">My Tools</h2>
+        <h2 class="font-semibold text-[24px] text-[#FAFAFA] leading-normal mb-6 md:mb-8">
+          My Tools
+        </h2>
 
         <div class="flex flex-wrap gap-4 text-gray-300">
           <div v-for="tool in tools" :key="tool.name" class="flex flex-col items-center">

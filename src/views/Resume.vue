@@ -6,21 +6,33 @@
     >
       <router-link to="/" v-slot="{ isActive }">
         <button
-          :class="isActive ? 'text-yellow-400' : 'text-gray-400 hover:text-yellow-400'"
+          :class="
+            isActive
+              ? 'text-[rgb(255,219,112)]'
+              : 'text-gray-400 hover:text-[rgb(255,219,112)]'
+          "
         >
           About
         </button>
       </router-link>
       <router-link to="/resume" v-slot="{ isActive }">
         <button
-          :class="isActive ? 'text-yellow-400' : 'text-gray-400 hover:text-yellow-400'"
+          :class="
+            isActive
+              ? 'text-[rgb(255,219,112)]'
+              : 'text-gray-400 hover:text-[rgb(255,219,112)]'
+          "
         >
           Resume
         </button>
       </router-link>
       <router-link to="/portfolio" v-slot="{ isActive }">
         <button
-          :class="isActive ? 'text-yellow-400' : 'text-gray-400 hover:text-yellow-400'"
+          :class="
+            isActive
+              ? 'text-[rgb(255,219,112)]'
+              : 'text-gray-400 hover:text-[rgb(255,219,112)]'
+          "
         >
           Portfolio
         </button>
@@ -31,19 +43,19 @@
     <div class="bg-[#1E1E1F] border border-[#383838] rounded-2xl p-6 md:p-10">
       <!-- Page Title -->
       <div class="mb-8 md:mb-12">
-        <h1 class="text-3xl md:text-5xl font-bold flex items-center gap-2 md:gap-3">
-          <i class="fas fa-book text-yellow-400 text-2xl md:text-4xl"></i>
-          Resume
-        </h1>
-        <div class="h-1 w-12 md:w-16 bg-yellow-400 mt-2 rounded"></div>
+        <h1 class="font-semibold text-[32px] text-[#FAFAFA] leading-normal">Resume</h1>
+        <div
+          class="h-1 w-12 md:w-16 mt-2 rounded"
+          style="background: linear-gradient(90deg, #ffda6f, #ffbc5c)"
+        ></div>
       </div>
 
       <!-- Experience Section -->
       <section class="mt-8 md:mt-12 mb-12 md:mb-20">
         <h2
-          class="text-2xl md:text-3xl font-semibold mb-6 md:mb-8 flex items-center gap-2 md:gap-3"
+          class="font-semibold text-[24px] md:text-[24px] text-[rgb(250,250,250)] mb-6 md:mb-8 flex items-center gap-2 md:gap-3"
         >
-          <i class="fas fa-rocket text-yellow-400 text-lg md:text-2xl"></i>
+          <i class="fas fa-rocket text-[rgb(255,219,112)] text-lg md:text-1xl"></i>
           Experience
         </h2>
 
@@ -55,9 +67,15 @@
       <!-- Education Section -->
       <section class="mt-8 md:mt-12">
         <h2
-          class="text-2xl md:text-3xl font-semibold mb-6 md:mb-8 flex items-center gap-2 md:gap-3"
+          class="font-semibold text-[24px] md:text-[24px] text-[rgb(250,250,250)] mb-6 md:mb-8 flex items-center gap-2 md:gap-3"
         >
-          <i class="fas fa-graduation-cap text-yellow-400 text-lg md:text-2xl"></i>
+          <i
+            class="fas fa-graduation-cap text-lg md:text-1xl text-transparent"
+            style="
+              background: linear-gradient(90deg, #ffda6f, #ffbc5c);
+            ;
+            "
+          ></i>
           Education
         </h2>
 
@@ -75,15 +93,10 @@ import ResumeCard from "../components/ResumeCard.vue";
 
 const education = [
   {
-    title: "BS Computer Science",
+    title: "BS Computer Science @ NU Laguna",
     date: "2019 — 2023",
     description:
-      "Graduated with a major in Computer Science focusing on software engineering and system development.",
-  },
-  {
-    title: "Frontend Development Bootcamp",
-    date: "2022/01 — 2022/03",
-    description: "Trained in Vue.js, Tailwind CSS, and modern UI engineering.",
+      "Completed a Bachelor of Science in Computer Science at NU Laguna, focusing on software engineering, system development, and modern computing principles. Gained hands-on experience in programming, database management, and application development, preparing for professional roles in the IT industry.",
   },
 ];
 
@@ -98,10 +111,16 @@ const experience = [
   },
 
   {
-    title: "System Developer @ Fujitsu",
-    date: "June 2024 — Present · 1 yr 6 mos",
+    title: "IT Consultant @ Cuatrix",
+    date: "June 2023 — Feb 2024 · 8 mos",
     description:
-      "Developing and maintaining manufacturing and business systems, analyzing technical requirements, coding and testing, troubleshooting issues, maintaining databases and system documentation, providing technical support and end-user training, and ensuring system security and performance. Also supports IT improvements, system upgrades, and compliance with QMS, EMS, CSR, and safety regulations.",
+      "Handled SAP front-end troubleshooting by managing and resolving incidents through ServiceNow, documenting solutions for future reference, and creating accurate incident reports. Leveraged artificial intelligence, machine learning, and available self-service tools to quickly find relevant answers and resolve issues independently, while also utilizing real-time support channels for direct access to SAP experts.",
+  },
+  {
+    title: "Internship @ Hacktiv Colab Inc.",
+    date: "Jan 2023 — April 2023 · 4 mos",
+    description:
+      "Worked on the Microsoft Power Platform, primarily developing and customizing solutions using Power Apps. Assisted in building applications to streamline business processes, automate workflows, and enhance overall productivity during the 4-month internship.",
   },
 ];
 </script>
