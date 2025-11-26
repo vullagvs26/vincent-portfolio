@@ -19,6 +19,9 @@
           <!-- Main content - No gap, no padding -->
           <div class="flex-1 min-w-0">
             <router-view />
+            
+            <!-- Footer -->
+            <Footer />
           </div>
         </div>
         
@@ -29,4 +32,5 @@
 
 <script setup>
 import Sidebar from "./components/Sidebar.vue";
+import Footer from "./components/Footer.vue";
 </script>

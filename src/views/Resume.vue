@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-20 relative lg:px-6">
+  <div class="relative lg:px-6">
     <!-- Top Navigation -->
     <TopNav />
     <BottomNav />
