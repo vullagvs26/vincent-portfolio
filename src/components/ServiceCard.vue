@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[#1a1a1a] p-4 md:p-6 rounded-lg border border-[#383838] hover:border-[#FFDB70] transition"
+    class="bg-[#1a1a1a] p-4 md:p-6 rounded-3xl border border-[#383838] hover:border-[#FFDB70] transition"
   >
     <div class="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
       <div class="p-2 md:p-3 rounded-lg shrink-0">

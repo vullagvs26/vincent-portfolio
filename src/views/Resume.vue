@@ -1,43 +1,7 @@
 <template>
-  <div class="md:px-6 pb-20 relative">
+  <div class="pb-20 relative lg:px-6">
     <!-- Top Navigation -->
-    <nav
-      class="absolute top-0 right-6 flex justify-end md:gap-10 text-sm md:text-lg bg-[#282829] border border-[#383838] rounded-tr-2xl rounded-bl-2xl px-6 py-4"
-    >
-      <router-link to="/" v-slot="{ isActive }">
-        <button
-          :class="
-            isActive
-              ? 'text-[rgb(255,219,112)]'
-              : 'text-gray-400 hover:text-[rgb(255,219,112)]'
-          "
-        >
-          About
-        </button>
-      </router-link>
-      <router-link to="/resume" v-slot="{ isActive }">
-        <button
-          :class="
-            isActive
-              ? 'text-[rgb(255,219,112)]'
-              : 'text-gray-400 hover:text-[rgb(255,219,112)]'
-          "
-        >
-          Resume
-        </button>
-      </router-link>
-      <router-link to="/portfolio" v-slot="{ isActive }">
-        <button
-          :class="
-            isActive
-              ? 'text-[rgb(255,219,112)]'
-              : 'text-gray-400 hover:text-[rgb(255,219,112)]'
-          "
-        >
-          Portfolio
-        </button>
-      </router-link>
-    </nav>
+    <TopNav />
 
     <!-- Main Container with background and border -->
     <div class="bg-[#1E1E1F] border border-[#383838] rounded-2xl p-6 md:p-10">
@@ -55,13 +19,16 @@
         <h2
           class="font-semibold text-[24px] md:text-[24px] text-[rgb(250,250,250)] mb-6 md:mb-8 flex items-center gap-2 md:gap-3"
         >
-          <span class="w-[46px] h-[46px] flex items-center justify-center bg-[#202022] rounded-xl  border-[#555555]" style="box-shadow: 0 0 12px rgba(0, 0, 0, 0.3)">
+          <span
+            class="w-[46px] h-[46px] flex items-center justify-center bg-[#202022] rounded-xl border-[#555555]"
+            style="box-shadow: 0 0 12px rgba(0, 0, 0, 0.3)"
+          >
             <i class="fas fa-terminal text-[rgb(255,219,112)] text-sm"></i>
           </span>
           Experience
         </h2>
 
-           <div class="space-y-0">
+        <div class="space-y-0">
           <ResumeCard v-for="item in experience" :key="item.title" :item="item" />
         </div>
       </section>
@@ -71,14 +38,17 @@
         <h2
           class="font-semibold text-[24px] md:text-[24px] text-[rgb(250,250,250)] mb-6 md:mb-8 flex items-center gap-2 md:gap-3"
         >
-           <span class="w-[46px] h-[46px] flex items-center justify-center bg-[#202022] rounded-xl  border-[#555555]" style="box-shadow: 0 0 12px rgba(0, 0, 0, 0.3)">
+          <span
+            class="w-[46px] h-[46px] flex items-center justify-center bg-[#202022] rounded-xl border-[#555555]"
+            style="box-shadow: 0 0 12px rgba(0, 0, 0, 0.3)"
+          >
             <i class="fas fa-graduation-cap text-[rgb(255,219,112)] text-sm"></i>
           </span>
           Education
         </h2>
 
         <!-- Timeline -->
-         <div class="space-y-0">
+        <div class="space-y-0">
           <ResumeCard v-for="item in education" :key="item.title" :item="item" />
         </div>
       </section>
@@ -88,6 +58,7 @@
 
 <script setup>
 import ResumeCard from "../components/ResumeCard.vue";
+import TopNav from "../components/TopNav.vue";
 
 const education = [
   {
