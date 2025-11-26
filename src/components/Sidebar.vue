@@ -41,9 +41,10 @@
     <div class="md:hidden w-full">
       <button
         @click="isContactOpen = !isContactOpen"
-        class="absolute top-8 right-4 flex items-center justify-center gap-2 px-3 py-2 rounded-tr-lg rounded-bl-lg bg-[#2a2a2a] hover:bg-[#383838] transition text-sm text-gray-300"
+        class="absolute top-8 right-4 flex items-center justify-center gap-2 px-3 py-2 rounded-tr-lg rounded-bl-2xl bg-[#2a2a2a] hover:bg-linear-to-br hover:from-[#564D34] hover:to-[#121212] transition text-xs font-normal shadow-lg shadow-black/20"
+        style="color: #ffdb70"
       >
-        <span>{{ isContactOpen ? "Hide" : "Show" }} Contact</span>
+        <i :class="isContactOpen ? 'fas fa-chevron-up' : 'fas fa-chevron-down'"></i>
       </button>
 
       <!-- Dropdown content -->
@@ -55,7 +56,10 @@
             <span class="bg-yellow-500/20 p-2 rounded-lg shrink-0">
               <i class="fas fa-envelope text-yellow-500 text-xs"></i>
             </span>
-            <span class="text-gray-300 truncate text-xs">vincentvullag@gmail.com</span>
+            <div class="flex flex-col">
+              <span class="text-gray-500 text-xs font-semibold">Email</span>
+              <span class="text-white truncate text-xs">vincentvullag@gmail.com</span>
+            </div>
           </div>
         </a>
 
@@ -72,7 +76,10 @@
             <span class="bg-orange-500/20 p-2 rounded-lg shrink-0">
               <i class="fab fa-github text-orange-500 text-xs"></i>
             </span>
-            <span class="truncate text-xs">vullagvs26</span>
+            <div class="flex flex-col">
+              <span class="text-gray-500 text-xs font-semibold">GitHub</span>
+              <span class="text-white truncate text-xs">vullagvs26</span>
+            </div>
           </div>
         </a>
 
@@ -89,7 +96,10 @@
             <span class="bg-blue-500/20 p-2 rounded-lg shrink-0">
               <i class="fab fa-linkedin text-blue-500 text-xs"></i>
             </span>
-            <span class="truncate text-xs">vullagvincent</span>
+            <div class="flex flex-col">
+              <span class="text-gray-500 text-xs font-semibold">LinkedIn</span>
+              <span class="text-white truncate text-xs">vullagvincent</span>
+            </div>
           </div>
         </a>
 
@@ -104,7 +114,10 @@
             <span class="bg-red-500/20 p-2 rounded-lg shrink-0">
               <i class="fas fa-location-crosshairs text-red-500 text-xs"></i>
             </span>
-            <span class="text-gray-300 truncate text-xs">Calamba, Laguna</span>
+            <div class="flex flex-col">
+              <span class="text-gray-500 text-xs font-semibold">Location</span>
+              <span class="text-white truncate text-xs">Calamba, Laguna</span>
+            </div>
           </div>
         </a>
       </div>
@@ -114,24 +127,30 @@
     <div class="hidden md:block lg:hidden w-full">
       <button
         @click="isContactOpen = !isContactOpen"
-        class="absolute top-16 right-6 flex items-center justify-center gap-2 px-3 py-2 rounded-tr-xl rounded-bl-xl bg-[#2a2a2a] hover:bg-[#383838] transition text-sm text-gray-300"
+        class="absolute top-16 right-6 flex items-center justify-center gap-2 px-3 py-2 rounded-tr-xl rounded-bl-xl bg-[#2a2a2a] hover:bg-linear-to-br hover:from-[#564D34] hover:to-[#121212] transition text-sm font-normal shadow-lg shadow-black/20"
+        style="color: #ffdb70"
       >
-        <span>{{ isContactOpen ? "Hide" : "Show" }} Contact</span>
+        <span>{{ isContactOpen ? "Hide" : "Show" }} Contacts</span>
       </button>
 
-      <!-- Dropdown content -->
-      <div v-if="isContactOpen" class="space-y-3 text-xs flex flex-col items-start">
+      <!-- Dropdown content - 2 columns grid -->
+      <div v-if="isContactOpen" class="grid grid-cols-2 gap-4 text-xs">
+        <!-- Email -->
         <a href="mailto:vincentvullag@gmail.com" class="block w-full">
           <div
-            class="flex items-center space-x-3 cursor-pointer p-2 rounded-lg hover:bg-yellow-500/20 transition"
+            class="flex items-start space-x-3 cursor-pointer p-3 rounded-lg hover:bg-yellow-500/20 transition"
           >
             <span class="bg-yellow-500/20 p-2 rounded-lg shrink-0">
               <i class="fas fa-envelope text-yellow-500 text-xs"></i>
             </span>
-            <span class="text-gray-300 truncate text-xs">vincentvullag@gmail.com</span>
+            <div class="flex flex-col">
+              <span class="text-gray-500 text-xs font-semibold">Email</span>
+              <span class="text-white text-xs">vincentvullag@gmail.com</span>
+            </div>
           </div>
         </a>
 
+        <!-- GitHub -->
         <a
           href="https://github.com/vullagvs26"
           target="_blank"
@@ -140,15 +159,19 @@
           class="block w-full"
         >
           <div
-            class="flex items-center space-x-3 cursor-pointer p-2 rounded-lg hover:bg-orange-500/20 transition"
+            class="flex items-start space-x-3 cursor-pointer p-3 rounded-lg hover:bg-orange-500/20 transition"
           >
             <span class="bg-orange-500/20 p-2 rounded-lg shrink-0">
               <i class="fab fa-github text-orange-500 text-xs"></i>
             </span>
-            <span class="truncate text-xs">vullagvs26</span>
+            <div class="flex flex-col">
+              <span class="text-gray-500 text-xs font-semibold">GitHub</span>
+              <span class="text-white text-xs">vullagvs26</span>
+            </div>
           </div>
         </a>
 
+        <!-- LinkedIn -->
         <a
           href="https://linkedin.com/in/vullagvincent"
           target="_blank"
@@ -157,27 +180,34 @@
           class="block w-full"
         >
           <div
-            class="flex items-center space-x-3 cursor-pointer p-2 rounded-lg hover:bg-blue-500/20 transition"
+            class="flex items-start space-x-3 cursor-pointer p-3 rounded-lg hover:bg-blue-500/20 transition"
           >
             <span class="bg-blue-500/20 p-2 rounded-lg shrink-0">
               <i class="fab fa-linkedin text-blue-500 text-xs"></i>
             </span>
-            <span class="truncate text-xs">vullagvincent</span>
+            <div class="flex flex-col">
+              <span class="text-gray-500 text-xs font-semibold">LinkedIn</span>
+              <span class="text-white text-xs">vullagvincent</span>
+            </div>
           </div>
         </a>
 
+        <!-- Location -->
         <a
           href="https://maps.app.goo.gl/29G2WACXWX9gcyFR9"
           target="_blank"
           class="block w-full"
         >
           <div
-            class="flex items-center space-x-3 cursor-pointer p-2 rounded-lg hover:bg-red-500/20 transition"
+            class="flex items-start space-x-3 cursor-pointer p-3 rounded-lg hover:bg-red-500/20 transition"
           >
             <span class="bg-red-500/20 p-2 rounded-lg shrink-0">
               <i class="fas fa-location-crosshairs text-red-500 text-xs"></i>
             </span>
-            <span class="text-gray-300 truncate text-xs">Calamba, Laguna</span>
+            <div class="flex flex-col">
+              <span class="text-gray-500 text-xs font-semibold">Location</span>
+              <span class="text-white text-xs">Calamba, Laguna</span>
+            </div>
           </div>
         </a>
       </div>
@@ -192,7 +222,10 @@
           <span class="bg-yellow-500/20 p-2 rounded-lg shrink-0">
             <i class="fas fa-envelope text-yellow-500 text-xs"></i>
           </span>
-          <span class="text-gray-300 truncate text-xs">vincentvullag@gmail.com</span>
+          <div class="flex flex-col">
+            <span class="text-gray-500 text-xs font-semibold">Email</span>
+            <span class="text-white truncate text-xs">vincentvullag@gmail.com</span>
+          </div>
         </div>
       </a>
 
@@ -209,7 +242,10 @@
           <span class="bg-orange-500/20 p-2 rounded-lg shrink-0">
             <i class="fab fa-github text-orange-500 text-xs"></i>
           </span>
-          <span class="truncate text-xs">vullagvs26</span>
+          <div class="flex flex-col">
+            <span class="text-gray-500 text-xs font-semibold">GitHub</span>
+            <span class="text-white truncate text-xs">vullagvs26</span>
+          </div>
         </div>
       </a>
 
@@ -226,7 +262,10 @@
           <span class="bg-blue-500/20 p-2 rounded-lg shrink-0">
             <i class="fab fa-linkedin text-blue-500 text-xs"></i>
           </span>
-          <span class="truncate text-xs">vullagvincent</span>
+          <div class="flex flex-col">
+            <span class="text-gray-500 text-xs font-semibold">LinkedIn</span>
+            <span class="text-white truncate text-xs">vullagvincent</span>
+          </div>
         </div>
       </a>
 
@@ -241,7 +280,10 @@
           <span class="bg-red-500/20 p-2 rounded-lg shrink-0">
             <i class="fas fa-location-crosshairs text-red-500 text-xs"></i>
           </span>
-          <span class="text-gray-300 truncate text-xs">Calamba, Laguna</span>
+          <div class="flex flex-col">
+            <span class="text-gray-500 text-xs font-semibold">Location</span>
+            <span class="text-white truncate text-xs">Calamba, Laguna</span>
+          </div>
         </div>
       </a>
     </div>

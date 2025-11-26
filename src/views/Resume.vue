@@ -5,7 +5,9 @@
     <BottomNav />
 
     <!-- Main Container with background and border -->
-    <div class="bg-[#1E1E1F] border border-[#383838] rounded-2xl p-6 md:p-10">
+    <div
+      class="bg-[#1E1E1F] border border-[#383838] rounded-2xl p-6 md:p-10 shadow-[0_10px_15px_rgba(0,0,0,0.5)]"
+    >
       <!-- Page Title -->
       <div class="mb-8 md:mb-12">
         <h1 class="font-semibold text-[32px] text-[#FAFAFA] leading-normal">Resume</h1>
