@@ -1,8 +1,8 @@
 <template>
-  <div class="md:px-10 pb-20 relative">
+  <div class="md:px-6 pb-20 relative">
     <!-- Top Navigation -->
     <nav
-      class="absolute top-0 right-10 flex justify-end md:gap-10 text-sm md:text-lg bg-[#282829] border border-[#383838] rounded-tr-2xl rounded-bl-2xl px-6 py-4"
+      class="absolute top-0 right-6 flex justify-end md:gap-10 text-sm md:text-lg bg-[#282829] border border-[#383838] rounded-tr-2xl rounded-bl-2xl px-6 py-4"
     >
       <router-link to="/" v-slot="{ isActive }">
         <button
@@ -55,11 +55,13 @@
         <h2
           class="font-semibold text-[24px] md:text-[24px] text-[rgb(250,250,250)] mb-6 md:mb-8 flex items-center gap-2 md:gap-3"
         >
-          <i class="fas fa-rocket text-[rgb(255,219,112)] text-lg md:text-1xl"></i>
+          <span class="w-[46px] h-[46px] flex items-center justify-center bg-[#202022] rounded-xl  border-[#555555]" style="box-shadow: 0 0 12px rgba(0, 0, 0, 0.3)">
+            <i class="fas fa-terminal text-[rgb(255,219,112)] text-sm"></i>
+          </span>
           Experience
         </h2>
 
-        <div class="space-y-6 md:space-y-8">
+           <div class="space-y-0">
           <ResumeCard v-for="item in experience" :key="item.title" :item="item" />
         </div>
       </section>
@@ -69,18 +71,14 @@
         <h2
           class="font-semibold text-[24px] md:text-[24px] text-[rgb(250,250,250)] mb-6 md:mb-8 flex items-center gap-2 md:gap-3"
         >
-          <i
-            class="fas fa-graduation-cap text-lg md:text-1xl text-transparent"
-            style="
-              background: linear-gradient(90deg, #ffda6f, #ffbc5c);
-            ;
-            "
-          ></i>
+           <span class="w-[46px] h-[46px] flex items-center justify-center bg-[#202022] rounded-xl  border-[#555555]" style="box-shadow: 0 0 12px rgba(0, 0, 0, 0.3)">
+            <i class="fas fa-graduation-cap text-[rgb(255,219,112)] text-sm"></i>
+          </span>
           Education
         </h2>
 
         <!-- Timeline -->
-        <div class="space-y-6 md:space-y-8">
+         <div class="space-y-0">
           <ResumeCard v-for="item in education" :key="item.title" :item="item" />
         </div>
       </section>

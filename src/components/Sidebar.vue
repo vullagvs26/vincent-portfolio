@@ -1,6 +1,6 @@
 <template>
   <aside
-    class="w-full lg:w-[280px] bg-[#1E1E1F] rounded-2xl p-6 flex flex-col items-center shadow-xl lg:sticky lg:top-6 lg:h-fit border border-[#383838]"
+    class="w-full lg:w-[280px] bg-[#1E1E1F] rounded-2xl p-6 flex flex-col items-center shadow-xl border border-[#383838]"
   >
     <!-- Avatar -->
     <div class="bg-[#333333] p-4 mt-10 rounded-4xl">
@@ -16,15 +16,11 @@
       Vincent Vullag
     </h2>
 
-    <div
-      class="mt-3 bg-[#2a2a2a] px-4 py-1 rounded-lg  text-xs md:text-sm"
-    >
+    <div class="mt-3 bg-[#2a2a2a] px-4 py-1 rounded-lg text-xs md:text-sm">
       Web Developer
     </div>
-    <div
-      class="mt-3 bg-[#2a2a2a] px-4 py-1 rounded-lg  text-xs md:text-sm"
-    >
-      Video Editor
+    <div class="mt-3 bg-[#2a2a2a] px-4 py-1 rounded-lg text-xs md:text-sm">
+      Youtube Editor
     </div>
 
     <!-- Divider -->

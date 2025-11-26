@@ -1,17 +1,28 @@
 <template>
-  <div class="min-h-screen bg-[#121212] text-white flex justify-center p-4 md:p-6 pt-8 md:pt-16">
-    <div class="flex flex-col lg:flex-row gap-0 md:gap-1 w-full max-w-7xl">
-      
-      <!-- Sidebar stays in place -->
-      <div class="w-full lg:w-[260px] shrink-0 sticky top-0 h-screen">
-        <Sidebar />
-      </div>
+  <div class="min-h-screen bg-[#121212] text-white">
+    <div class="flex justify-center px-4 md:px-6 pt-8 md:pt-16 pb-20">
+      <div class="w-full max-w-7xl">
+        
+        <!-- Sidebar - Always visible at top on mobile/tablet, hidden on large screens -->
+        <div class="lg:hidden mb-8">
+          <Sidebar />
+        </div>
 
-      <!-- Main content scrolls normally -->
-      <div class="flex-1 flex flex-col min-w-0">
-        <router-view />
-      </div>
+        <div class="flex w-full">
+          <!-- Sidebar - Fixed on large screens only -->
+          <div class="hidden lg:block w-[280px] shrink-0">
+            <div class="fixed top-16 w-[280px]">
+              <Sidebar />
+            </div>
+          </div>
 
+          <!-- Main content - No gap, no padding -->
+          <div class="flex-1 min-w-0">
+            <router-view />
+          </div>
+        </div>
+        
+      </div>
     </div>
   </div>
 </template>
