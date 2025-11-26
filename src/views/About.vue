@@ -1,7 +1,10 @@
 <template>
-    <div class="pb-20 relative lg:px-6">
+  <div class="pb-20 relative lg:px-6">
     <!-- Navigation -->
-      <TopNav />
+
+    <TopNav />
+
+    <BottomNav />
 
     <!-- Main Container -->
     <div
@@ -10,7 +13,7 @@
       <!-- Title -->
       <div class="mb-6 md:mb-6">
         <h1 class="font-semibold text-[32px] text-[#FAFAFA] leading-normal">About</h1>
-       <div
+        <div
           class="h-1 w-12 md:w-16 mt-2 rounded"
           style="background: linear-gradient(90deg, #ffda6f, #ffbc5c)"
         ></div>
@@ -80,6 +83,7 @@
 <script setup>
 import ServiceCard from "../components/ServiceCard.vue";
 import TopNav from "../components/TopNav.vue";
+import BottomNav from "../components/BottomNav.vue";
 const tools = [
   { img: "/src/assets/my-tools/vscode.png" },
   { img: "/src/assets/my-tools/html.png" },

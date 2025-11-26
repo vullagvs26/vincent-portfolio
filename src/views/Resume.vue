@@ -2,6 +2,7 @@
   <div class="pb-20 relative lg:px-6">
     <!-- Top Navigation -->
     <TopNav />
+    <BottomNav />
 
     <!-- Main Container with background and border -->
     <div class="bg-[#1E1E1F] border border-[#383838] rounded-2xl p-6 md:p-10">
@@ -59,6 +60,7 @@
 <script setup>
 import ResumeCard from "../components/ResumeCard.vue";
 import TopNav from "../components/TopNav.vue";
+import BottomNav from "../components/BottomNav.vue";
 
 const education = [
   {
