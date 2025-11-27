@@ -98,7 +98,7 @@
             </span>
             <div class="flex flex-col">
               <span class="text-gray-500 text-xs font-semibold">LinkedIn</span>
-              <span class="text-white truncate text-xs">vullagvincent</span>
+              <span class="text-white truncate text-xs">in/vullagvincent</span>
             </div>
           </div>
         </a>
@@ -187,7 +187,7 @@
             </span>
             <div class="flex flex-col">
               <span class="text-gray-500 text-xs font-semibold">LinkedIn</span>
-              <span class="text-white text-xs">vullagvincent</span>
+              <span class="text-white text-xs">in/vullagvincent</span>
             </div>
           </div>
         </a>
@@ -264,7 +264,7 @@
           </span>
           <div class="flex flex-col">
             <span class="text-gray-500 text-xs font-semibold">LinkedIn</span>
-            <span class="text-white truncate text-xs">vullagvincent</span>
+            <span class="text-white truncate text-xs">in/vullagvincent</span>
           </div>
         </div>
       </a>
