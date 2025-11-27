@@ -28,7 +28,7 @@
               ? 'text-[#ffda6f]  border-[#ffda6f]'
               : 'text-gray-400 hover:text-gray-300'
           "
-          class="pb-3 px-2 md:px-1 whitespace-nowrap font-medium transition-colors text-sm md:text-base shrink-0"
+          class="pb-3 px-2 md:px-1 whitespace-nowrap font-normal transition-colors text-sm md:text-base shrink-0"
         >
           {{ category }}
         </button>
