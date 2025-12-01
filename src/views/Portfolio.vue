@@ -35,7 +35,7 @@
       </div>
 
       <!-- Projects Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <button
           v-for="project in filteredProjects"
           :key="project.id"
@@ -47,11 +47,11 @@
             <img
               :src="project.image"
               :alt="project.title"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
             />
             <!-- Overlay -->
             <div
-              class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"
+              class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"
             ></div>
           </div>
 
@@ -84,9 +84,12 @@
         <!-- Close Button -->
         <button
           @click="closeModal"
-          class="absolute top-4 right-4 text-gray-400 hover:text-white transition z-10"
+          class="absolute top-4 right-4 text-white hover:text-gray-300 transition z-10 p-1 rounded-lg"
+          style="
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+          "
         >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -97,14 +100,12 @@
         </button>
 
         <!-- Project Image -->
-        <div class="relative h-64 md:h-80 overflow-hidden rounded-t-2xl bg-[#282829]">
+        <div class="relative rounded-t-2xl bg-[#282829]">
           <img
             :src="selectedProject.image"
             :alt="selectedProject.title"
-            class="w-full h-full object-cover"
+            class="w-full h-auto object-contain"
           />
-          <!-- Overlay -->
-          <div class="absolute inset-0 bg-black/20"></div>
         </div>
 
         <!-- Modal Content -->
@@ -185,69 +186,80 @@ onUnmounted(() => {
 const projects = [
   {
     id: 1,
-    title: "Urla Elegance Iskele",
-    category: "Web Design",
-    date: "October 9, 2022",
-    image: "https://via.placeholder.com/400x300?text=Urla+Elegance",
-    link: "#",
+    title: "Hulma Aesthetic Studio",
+    category: "Web Development",
+    date: "June 20, 2023",
+    image: "/src/assets/projects/hulma1.png",
+    link: "https://github.com/vullagvs26/HULMA",
     description:
-      "I am the site supervisor of the construction consisting of 2 types and 8 villas in total in the Iskele District of Urla. Our launch sales have also started in this project, which will be unique. For communication and detailed information, you can visit the Tire İnşaat website and call 0 (412) 224 56 30.",
-    technologies: ["Project Management", "Construction", "Supervision"],
+      "A comprehensive pre-accounting program designed to streamline financial operations and accounting workflows. PayVel provides tools for invoice management, expense tracking, and financial reporting with real-time data analysis.",
+    technologies: ["Vue.js", "Node.js", "MySQL", "Chart.js"],
   },
   {
     id: 2,
-    title: "Infinity CMS V.1.0",
-    category: "Web Development",
-    date: "March 15, 2023",
-    image: "https://via.placeholder.com/400x300?text=Infinity+CMS",
-    link: "#",
-    description:
-      "A modern and powerful CMS (Content Management System) built with Vue.js and Laravel. Infinity CMS provides a complete solution for managing digital content with an intuitive interface and powerful features for content creators and administrators.",
-    technologies: ["Vue.js", "Laravel", "PostgreSQL", "Tailwind CSS"],
-  },
-  {
-    id: 3,
-    title: "PayVel - Pre-Accounting Program",
+    title: "Line Out System",
     category: "Web Development",
     date: "June 20, 2023",
-    image: "https://via.placeholder.com/400x300?text=PayVel",
+    image: "/src/assets/projects/los.png",
     link: "#",
     description:
       "A comprehensive pre-accounting program designed to streamline financial operations and accounting workflows. PayVel provides tools for invoice management, expense tracking, and financial reporting with real-time data analysis.",
     technologies: ["Vue.js", "Node.js", "MySQL", "Chart.js"],
   },
   {
-    id: 4,
-    title: "Filament OTP Login",
+    id: 3,
+    title: "Tindog",
     category: "Web Development",
-    date: "August 10, 2023",
-    image: "https://via.placeholder.com/400x300?text=Filament+OTP",
+    date: "June 20, 2023",
+    image: "/src/assets/projects/tindog.png",
+    link: "https://vullagvs26.github.io/tindogChallenge/",
+    description:
+      "A comprehensive pre-accounting program designed to streamline financial operations and accounting workflows. PayVel provides tools for invoice management, expense tracking, and financial reporting with real-time data analysis.",
+    technologies: ["Vue.js", "Node.js", "MySQL", "Chart.js"],
+  },
+  {
+    id: 4,
+    title: "Helpdesk System Prototype",
+    category: "Web Design",
+    date: "October 9, 2022",
+    image: "/src/assets/projects/helpdesk.png",
     link: "#",
     description:
-      "An advanced authentication system using One-Time Password (OTP) built for FilamentPHP. This system enhances security by implementing time-based OTP verification for user authentication and account protection.",
-    technologies: ["PHP", "Laravel", "FilamentPHP", "MySQL"],
+      "I am the site supervisor of the construction consisting of 2 types and 8 villas in total in the Iskele District of Urla. Our launch sales have also started in this project, which will be unique. For communication and detailed information, you can visit the Tire İnşaat website and call 0 (412) 224 56 30.",
+    technologies: ["Project Management", "Construction", "Supervision"],
   },
   {
     id: 5,
-    title: "FilamentPHP LeafletJS Map Picker",
-    category: "Web Development",
-    date: "September 5, 2023",
-    image: "https://via.placeholder.com/400x300?text=Map+Picker",
+    title: "Hulma Prototype",
+    category: "Web Design",
+    date: "March 15, 2023",
+    image: "/src/assets/projects/hulma.png",
     link: "#",
     description:
-      "An interactive map picker component for FilamentPHP using LeafletJS. This tool allows users to select locations on a map within FilamentPHP admin panels, perfect for geo-location based data collection.",
-    technologies: ["PHP", "Laravel", "LeafletJS", "FilamentPHP"],
+      "A modern and powerful CMS (Content Management System) built with Vue.js and Laravel. Infinity CMS provides a complete solution for managing digital content with an intuitive interface and powerful features for content creators and administrators.",
+    technologies: ["Vue.js", "Laravel", "PostgreSQL", "Tailwind CSS"],
   },
   {
     id: 6,
-    title: "Filament Translatable Pro",
-    category: "Web Development",
-    date: "October 30, 2023",
-    image: "https://via.placeholder.com/400x300?text=Translatable+Pro",
+    title: "PQH Management",
+    category: "Web Design",
+    date: "June 20, 2023",
+    image: "/src/assets/projects/pqh.png",
     link: "#",
     description:
-      "A powerful translation management system for FilamentPHP that enables multi-language support. Filament Translatable Pro simplifies the process of managing content translations with an intuitive interface and automated workflows.",
-    technologies: ["PHP", "Laravel", "FilamentPHP", "i18n"],
+      "A comprehensive pre-accounting program designed to streamline financial operations and accounting workflows. PayVel provides tools for invoice management, expense tracking, and financial reporting with real-time data analysis.",
+    technologies: ["Vue.js", "Node.js", "MySQL", "Chart.js"],
+  },
+  {
+    id: 7,
+    title: "Line Out System",
+    category: "Web Design",
+    date: "June 20, 2023",
+    image: "/src/assets/projects/lineoutsystem.png",
+    link: "#",
+    description:
+      "A comprehensive pre-accounting program designed to streamline financial operations and accounting workflows. PayVel provides tools for invoice management, expense tracking, and financial reporting with real-time data analysis.",
+    technologies: ["Figma", "Node.js", "MySQL", "Chart.js"],
   },
 ];
 
