@@ -124,13 +124,22 @@
               <i class="fas fa-tag"></i>{{ selectedProject.category }}
             </span>
             <a
+              v-if="selectedProject.codeLink && selectedProject.codeLink !== '#'"
+              :href="selectedProject.codeLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[#ffda6f] hover:underline flex items-center gap-1"
+            >
+              <i class="fab fa-github"></i>Code
+            </a>
+            <a
               v-if="selectedProject.link && selectedProject.link !== '#'"
               :href="selectedProject.link"
               target="_blank"
               rel="noopener noreferrer"
               class="text-[#ffda6f] hover:underline flex items-center gap-1"
             >
-              <i class="fas fa-external-link-alt"></i>View Project
+              <i class="fas fa-external-link-alt"></i>Preview
             </a>
           </div>
 
@@ -188,78 +197,96 @@ const projects = [
     id: 1,
     title: "Hulma Aesthetic Studio",
     category: "Web Development",
-    date: "June 20, 2023",
+    date: "February 21, 2025",
     image: "/src/assets/projects/hulma1.png",
-    link: "https://github.com/vullagvs26/HULMA",
+    link: "https://hulma.netlify.app",
+    codeLink: "https://github.com/vullagvs26/HULMA",
     description:
-      "A comprehensive pre-accounting program designed to streamline financial operations and accounting workflows. PayVel provides tools for invoice management, expense tracking, and financial reporting with real-time data analysis.",
-    technologies: ["Vue.js", "Node.js", "MySQL", "Chart.js"],
+      "Led the front-end development of Hulma Aesthetic Studio’s online booking website. The platform allows clients to seamlessly book appointments, explore available services, and learn more about the studio. Built with Vue.js and Vite, the site features an intuitive calendar booking experience powered by v-calendar and an automated email notification system using EmailJS. This project also served as part of a marketing initiative to strengthen Hulma’s online presence and improve customer engagement.",
+    technologies: ["Vue.js", "Vite", "v-calendar", "emailjs", "TypeScript"],
   },
   {
     id: 2,
     title: "Line Out System",
     category: "Web Development",
-    date: "June 20, 2023",
+    date: "August 8, 2025",
     image: "/src/assets/projects/los.png",
     link: "#",
+    codeLink: "#",
     description:
-      "A comprehensive pre-accounting program designed to streamline financial operations and accounting workflows. PayVel provides tools for invoice management, expense tracking, and financial reporting with real-time data analysis.",
-    technologies: ["Vue.js", "Node.js", "MySQL", "Chart.js"],
+      "Built a full-stack manufacturing system for Fujitsu designed to manage the line-in and line-out workflow of production items. The system enables staff to accurately log product movement, track units requiring repair or troubleshooting, and monitor where each item will proceed next. It also includes model management, user role management, error management, and real-time notifications to support smooth operations. Authentication is integrated with the official Company portal using token-based access, ensuring secure and centralized user control.",
+    technologies: [
+      "Vue.js",
+      "Primevue",
+      "PHP",
+      "Laravel",
+      "MySQL Workbench",
+      "Oracle DB",
+      "Figma",
+      "draw.io",
+      "axios",
+      "pinia",
+      "tailwindcss",
+    ],
   },
   {
     id: 3,
     title: "Tindog",
     category: "Web Development",
-    date: "June 20, 2023",
+    date: "3 years ago",
     image: "/src/assets/projects/tindog.png",
     link: "https://vullagvs26.github.io/tindogChallenge/",
+    codeLink: "https://github.com/vullagvs26/tindogChallenge",
     description:
-      "A comprehensive pre-accounting program designed to streamline financial operations and accounting workflows. PayVel provides tools for invoice management, expense tracking, and financial reporting with real-time data analysis.",
-    technologies: ["Vue.js", "Node.js", "MySQL", "Chart.js"],
+      "A practice project created as part of a Udemy certification task, where I replicated the Tindog website design to strengthen my front-end development skills. This project helped me improve my understanding of layout structuring, responsive design, and modern UI implementation while closely following a given design reference.",
+    technologies: ["HTML", "CSS"],
   },
   {
     id: 4,
     title: "Helpdesk System Prototype",
     category: "Web Design",
-    date: "October 9, 2022",
+    date: "Last Year",
     image: "/src/assets/projects/helpdesk.png",
-    link: "#",
+    link:
+      "https://www.figma.com/design/CenOoqKCUVlM97YCxgYrKZ/Helpdesk?node-id=0-1&t=fs1PrZ7M7BClGiux-1",
+    codeLink: "https://github.com/vullagvs26/helpdesk-system",
     description:
-      "I am the site supervisor of the construction consisting of 2 types and 8 villas in total in the Iskele District of Urla. Our launch sales have also started in this project, which will be unique. For communication and detailed information, you can visit the Tire İnşaat website and call 0 (412) 224 56 30.",
-    technologies: ["Project Management", "Construction", "Supervision"],
+      "Created a Helpdesk System prototype as part of my initial training in the company, focusing on understanding the authorization process and user management within the internal company portal. The prototype simulated a ticket-raising service where users could submit concerns related to manufacturing systems. This project helped me gain hands-on experience with access control, workflow planning, and designing a functional support system for internal operations.",
+    technologies: [
+      "Project Management",
+      "Vue.js",
+      "draw.io",
+      "PHP",
+      "Laravel",
+      "PosgreSQL",
+      "Tailwind CSS",
+    ],
   },
   {
     id: 5,
     title: "Hulma Prototype",
     category: "Web Design",
-    date: "March 15, 2023",
+    date: "March 1, 2025",
     image: "/src/assets/projects/hulma.png",
-    link: "#",
+    link:
+      "https://www.figma.com/design/1q7vRuuOT1CJuUBv7QBXOQ/HULMA?node-id=0-1&t=Dl1aRlfefaobgw8k-1",
+    codeLink: "#",
     description:
-      "A modern and powerful CMS (Content Management System) built with Vue.js and Laravel. Infinity CMS provides a complete solution for managing digital content with an intuitive interface and powerful features for content creators and administrators.",
-    technologies: ["Vue.js", "Laravel", "PostgreSQL", "Tailwind CSS"],
+      "Designed a prototype for Hulma Aesthetic Studio’s website to plan and visualize the user interface and user experience before development. The design focused on presenting services clearly, enabling intuitive navigation, and creating an appealing online presence. Built using Vue.js, Laravel, PostgreSQL, and Tailwind CSS, the prototype served as a foundation for both the visual layout and functional planning of the final website.",
+    technologies: ["Figma", "UI/UX Design", "Prototyping"],
   },
   {
     id: 6,
-    title: "PQH Management",
-    category: "Web Design",
-    date: "June 20, 2023",
-    image: "/src/assets/projects/pqh.png",
-    link: "#",
-    description:
-      "A comprehensive pre-accounting program designed to streamline financial operations and accounting workflows. PayVel provides tools for invoice management, expense tracking, and financial reporting with real-time data analysis.",
-    technologies: ["Vue.js", "Node.js", "MySQL", "Chart.js"],
-  },
-  {
-    id: 7,
     title: "Line Out System",
     category: "Web Design",
-    date: "June 20, 2023",
+    date: "March 30, 2023",
     image: "/src/assets/projects/lineoutsystem.png",
-    link: "#",
+    link:
+      "https://www.figma.com/design/hVF3mD1m6oMZPJFXxiGXlj/LOSv2?node-id=0-1&t=bm3bkIl6yAUmgB1E-1",
+    codeLink: "#",
     description:
-      "A comprehensive pre-accounting program designed to streamline financial operations and accounting workflows. PayVel provides tools for invoice management, expense tracking, and financial reporting with real-time data analysis.",
-    technologies: ["Figma", "Node.js", "MySQL", "Chart.js"],
+      "Designed the UI/UX of the Line Out System using Figma, creating detailed user flows, layout prototypes, and interface components to ensure a clean, intuitive, and efficient design. The design served as a foundational blueprint for the system’s development, guiding implementation with technologies like Node.js, MySQL, and Chart.js. Through thoughtful user-centred design, the project aimed to improve usability, data visualization, and overall user experience before coding began.",
+    technologies: ["Figma", "UI/UX Design", "Prototyping"],
   },
 ];
 
