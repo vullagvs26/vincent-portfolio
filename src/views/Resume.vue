@@ -82,7 +82,7 @@ import BottomNav from "../components/BottomNav.vue";
 
 const exportResume = () => {
   const link = document.createElement("a");
-  link.href = "/src/assets/Resume_Vullag.pdf";
+  link.href = "/vincent-portfolio/assets/Resume_Vullag.pdf";
   link.download = "Resume_Vullag.pdf";
   document.body.appendChild(link);
   link.click();
@@ -105,7 +105,7 @@ const experience = [
     description:
       "Developing and maintaining manufacturing and business systems, analyzing technical requirements, coding and testing, troubleshooting issues, maintaining databases and system documentation, providing technical support and end-user training, and ensuring system security and performance. Also supports IT improvements, system upgrades, and compliance with QMS, EMS, CSR, and safety regulations.",
 
-    logo: "/src/assets/fujitsu.png",
+    logo: "/vincent-portfolio/assets/fujitsu.png",
   },
 
   {

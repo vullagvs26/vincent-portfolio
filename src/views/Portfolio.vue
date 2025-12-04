@@ -198,7 +198,7 @@ const projects = [
     title: "Hulma Aesthetic Studio",
     category: "Web Development",
     date: "February 21, 2025",
-    image: "/src/assets/projects/hulma1.png",
+    image: "/vincent-portfolio/assets/projects/hulma1.png",
     link: "https://hulma.netlify.app",
     codeLink: "https://github.com/vullagvs26/HULMA",
     description:
@@ -210,7 +210,7 @@ const projects = [
     title: "Line Out System",
     category: "Web Development",
     date: "August 8, 2025",
-    image: "/src/assets/projects/los.png",
+    image: "/vincent-portfolio/assets/projects/los.png",
     link: "#",
     codeLink: "#",
     description:
@@ -234,7 +234,7 @@ const projects = [
     title: "Tindog",
     category: "Web Development",
     date: "3 years ago",
-    image: "/src/assets/projects/tindog.png",
+    image: "/vincent-portfolio/assets/projects/tindog.png",
     link: "https://vullagvs26.github.io/tindogChallenge/",
     codeLink: "https://github.com/vullagvs26/tindogChallenge",
     description:
@@ -246,7 +246,7 @@ const projects = [
     title: "Helpdesk System Prototype",
     category: "Web Design",
     date: "Last Year",
-    image: "/src/assets/projects/helpdesk.png",
+    image: "/vincent-portfolio/assets/projects/helpdesk.png",
     link:
       "https://www.figma.com/design/CenOoqKCUVlM97YCxgYrKZ/Helpdesk?node-id=0-1&t=fs1PrZ7M7BClGiux-1",
     codeLink: "https://github.com/vullagvs26/helpdesk-system",
@@ -267,7 +267,7 @@ const projects = [
     title: "Hulma Prototype",
     category: "Web Design",
     date: "March 1, 2025",
-    image: "/src/assets/projects/hulma.png",
+    image: "/vincent-portfolio/assets/projects/hulma.png",
     link:
       "https://www.figma.com/design/1q7vRuuOT1CJuUBv7QBXOQ/HULMA?node-id=0-1&t=Dl1aRlfefaobgw8k-1",
     codeLink: "#",
@@ -280,7 +280,7 @@ const projects = [
     title: "Line Out System",
     category: "Web Design",
     date: "March 30, 2023",
-    image: "/src/assets/projects/lineoutsystem.png",
+    image: "/vincent-portfolio/assets/projects/lineoutsystem.png",
     link:
       "https://www.figma.com/design/hVF3mD1m6oMZPJFXxiGXlj/LOSv2?node-id=0-1&t=bm3bkIl6yAUmgB1E-1",
     codeLink: "#",
