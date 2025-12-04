@@ -115,5 +115,3 @@ Make sure `base` in [`vite.config.js`](vite.config.js) matches your repository n
 Based on [CodeWithSadee's vCard Portfolio](https://github.com/codewithsadee/vcard-personal-portfolio). Feel free to use for your personal portfolio.
 
 ---
-
-**Made with ❤️ by [Vincent Vullag](https://github.com/vullagvs26)**
