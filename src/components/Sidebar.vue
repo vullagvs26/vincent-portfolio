@@ -7,10 +7,10 @@
       class="flex flex-col md:flex-row lg:flex-col w-full items-center md:items-start lg:items-center gap-4"
     >
       <!-- Avatar -->
-      <div class="bg-[#333333] p-4 rounded-3xl mt-4 shrink-0">
+      <div class="bg-[#333333] p-2 rounded-3xl mt-4 shrink-0">
         <img
-          src="../assets/avatar.png"
-          class="w-24 h-24 rounded-2xl object-cover"
+          :src="avatarUrl"
+          class="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-2xl object-contain"
           alt="avatar"
         />
       </div>
@@ -334,6 +334,7 @@
 
 <script setup>
 import { ref } from "vue";
+import avatarUrl from "../assets/avatar.png";
 
 const isContactOpen = ref(false);
 </script>
