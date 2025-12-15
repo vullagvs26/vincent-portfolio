@@ -102,10 +102,53 @@
         <!-- Project Image -->
         <div class="relative rounded-t-2xl bg-[#282829]">
           <img
-            :src="selectedProject.image"
+            :src="
+              selectedProject.images && selectedProject.images.length > 0
+                ? selectedProject.images[currentImageIndex]
+                : selectedProject.image
+            "
             :alt="selectedProject.title"
             class="w-full h-auto object-contain"
           />
+          <!-- Carousel Controls -->
+          <div
+            v-if="selectedProject.images && selectedProject.images.length > 1"
+            class="absolute inset-0 flex items-center justify-between px-4"
+          >
+            <button
+              @click="prevImage"
+              class="bg-[#ffda6f] hover:bg-[#ffbc5c] text-black p-2 rounded-full transition"
+            >
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+            </button>
+            <button
+              @click="nextImage"
+              class="bg-[#ffda6f] hover:bg-[#ffbc5c] text-black p-2 rounded-full transition"
+            >
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Image Counter -->
+          <div
+            v-if="selectedProject.images && selectedProject.images.length > 1"
+            class="absolute bottom-4 right-4 bg-[#ffda6f] text-black px-3 py-1 rounded-full text-sm font-semibold"
+          >
+            {{ currentImageIndex + 1 }} / {{ selectedProject.images.length }}
+          </div>
         </div>
 
         <!-- Modal Content -->
@@ -177,6 +220,7 @@ import BottomNav from "../components/BottomNav.vue";
 
 const activeCategory = ref("All");
 const selectedProject = ref(null);
+const currentImageIndex = ref(0);
 
 const handleKeydown = (event) => {
   if (event.key === "Escape" && selectedProject.value) {
@@ -288,6 +332,29 @@ const projects = [
       "Designed the UI/UX of the Line Out System using Figma, creating detailed user flows, layout prototypes, and interface components to ensure a clean, intuitive, and efficient design. The design served as a foundational blueprint for the system’s development, guiding implementation with technologies like Node.js, MySQL, and Chart.js. Through thoughtful user-centred design, the project aimed to improve usability, data visualization, and overall user experience before coding began.",
     technologies: ["Figma", "UI/UX Design", "Prototyping"],
   },
+  {
+    id: 7,
+    title: "Splunk Dashboards",
+    category: "Data Analytics",
+    date: "January 15, 2025",
+    image: "/vincent-portfolio/assets/projects/splunk1.png",
+    images: [
+      "/vincent-portfolio/assets/projects/splunk1.png",
+      "/vincent-portfolio/assets/projects/splunk2.png",
+      "/vincent-portfolio/assets/projects/splunk3.png",
+      "/vincent-portfolio/assets/projects/splunk4.png",
+    ],
+    description:
+      "Built and maintained interactive Splunk dashboards for warehouse and manufacturing systems to monitor operational performance, productivity, and process status. Designed data visualizations to analyze worker activities, machine states, and time-based metrics, transforming raw log data into actionable insights. The dashboards support decision-making by providing clear, real-time views of key KPIs, trends, and system behavior across production and warehouse operations.",
+    technologies: [
+      "SPLUNK",
+      "XML",
+      "Javascript",
+      "Data Visualization",
+      "Dashboards",
+      "Reports",
+    ],
+  },
 ];
 
 const categories = computed(() => {
@@ -309,6 +376,22 @@ const openModal = (project) => {
 
 const closeModal = () => {
   selectedProject.value = null;
+  currentImageIndex.value = 0;
   document.body.style.overflow = "auto";
+};
+
+const nextImage = () => {
+  if (selectedProject.value?.images) {
+    currentImageIndex.value =
+      (currentImageIndex.value + 1) % selectedProject.value.images.length;
+  }
+};
+
+const prevImage = () => {
+  if (selectedProject.value?.images) {
+    currentImageIndex.value =
+      (currentImageIndex.value - 1 + selectedProject.value.images.length) %
+      selectedProject.value.images.length;
+  }
 };
 </script>
