@@ -101,7 +101,7 @@ const education = [
 const experience = [
   {
     title: "System Developer @ Fujitsu",
-    date: "June 2024 — Present · 1 yr 6 mos",
+    date: "June 2024 — Present · 1 yr 7 mos",
     description:
       "Developing and maintaining manufacturing and business systems, analyzing technical requirements, coding and testing, troubleshooting issues, maintaining databases and system documentation, providing technical support and end-user training, and ensuring system security and performance. Also supports IT improvements, system upgrades, and compliance with QMS, EMS, CSR, and safety regulations.",
 
