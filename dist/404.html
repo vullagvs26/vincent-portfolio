@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      // SPA GitHub Pages redirect - keeps 1 path segment for project pages
+      (function (l) {
+        var pathSegmentsToKeep = 1; // e.g. user.github.io/repo-name
+        var path = l.pathname.replace(/^\//, '').split('/');
+        var newPath = path
+          .slice(0, pathSegmentsToKeep)
+          .join('/') + '/?/' + path.slice(pathSegmentsToKeep).join('/');
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/' +
+          newPath + (l.search ? '&' + l.search.slice(1) : '') + l.hash
+        );
+      })(window.location);
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/vincent-portfolio/" />
+    </noscript>
+  </head>
+  <body></body>
+</html>
