@@ -345,7 +345,7 @@ const projects = [
       "/vincent-portfolio/assets/projects/splunk4.png",
     ],
     description:
-      "Built and maintained interactive Splunk dashboards for warehouse and manufacturing systems to monitor operational performance, productivity, and process status. Designed data visualizations to analyze worker activities, machine states, and time-based metrics, transforming raw log data into actionable insights. The dashboards support decision-making by providing clear, real-time views of key KPIs, trends, and system behavior across production and warehouse operations.",
+    "Built and maintained interactive Splunk dashboards for warehouse and manufacturing systems to monitor operational performance, productivity, and process status. Designed data visualizations to analyze worker activities, machine states, and time-based metrics, transforming raw log data into actionable insights. The dashboards support decision-making by providing clear, real-time views of key KPIs, trends, and system behavior across production and warehouse operations.",
     technologies: [
       "SPLUNK",
       "XML",
@@ -353,6 +353,32 @@ const projects = [
       "Data Visualization",
       "Dashboards",
       "Reports",
+    ],
+  },
+  {
+    id: 8,
+    title: "ToDoList - Vue-Auth-Supabase",
+    category: "Web Development",
+    date: "December 18, 2025",
+    image: "/vincent-portfolio/assets/projects/todo2.png",
+    images: [
+      "/vincent-portfolio/assets/projects/todo1.png",
+      "/vincent-portfolio/assets/projects/todo2.png",
+      "/vincent-portfolio/assets/projects/todo3.png",
+      "/vincent-portfolio/assets/projects/todo4.png",
+    ],
+    link:
+      "https://to-do-list-hazel-five-76.vercel.app",
+    codeLink: "https://github.com/vullagvs26/To-Do-List",
+    description:
+    "A full-featured todo management application built with Vue 3, Vite, and Supabase. This modern web app combines user authentication, comprehensive task management, data visualization, and a beautiful dark mode experience.",
+    technologies: [
+      "Chart.js",
+      "Vue.js",
+      "Javascript",
+      "Supabase",
+      "Tailwind CSS",
+      "Authentication",
     ],
   },
 ];
