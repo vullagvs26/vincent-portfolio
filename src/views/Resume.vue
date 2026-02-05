@@ -89,6 +89,34 @@ const exportResume = () => {
   document.body.removeChild(link);
 };
 
+// Function to calculate months/years from start date to today
+const getDuration = (startDate) => {
+  const start = new Date(startDate);
+  const now = new Date();
+
+  let months =
+    (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth()) + 1 ;
+
+  const years = Math.floor(months / 12);
+  const remainingMonths = months % 12;
+
+  let result = "";
+
+  if (years > 0) result += `${years} yr${years > 1 ? "s" : ""}`;
+  if (remainingMonths > 0)
+    result += `${years > 0 ? " " : ""}${remainingMonths} mo${
+      remainingMonths > 1 ? "s" : ""
+    }`;
+
+  return result || "0 mos";
+};
+
+// Month name formatter (June 2024)
+const formatMonthYear = (dateStr) => {
+  const date = new Date(dateStr);
+  return date.toLocaleString("en-US", { month: "long", year: "numeric" });
+};
+
 const education = [
   {
     title: "BS Computer Science @ NU Laguna",
@@ -101,10 +129,9 @@ const education = [
 const experience = [
   {
     title: "System Developer @ Fujitsu",
-    date: "June 2024 — Present · 1 yr 7 mos",
+    date: `${formatMonthYear("2024-06-01")} — Present · ${getDuration("2024-06-01")}`,
     description:
       "Developing and maintaining manufacturing and business systems, analyzing technical requirements, coding and testing, troubleshooting issues, maintaining databases and system documentation, providing technical support and end-user training, and ensuring system security and performance. Also supports IT improvements, system upgrades, and compliance with QMS, EMS, CSR, and safety regulations.",
-
     logo: "/vincent-portfolio/assets/fujitsu.png",
   },
 
