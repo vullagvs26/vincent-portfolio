@@ -11,7 +11,9 @@
       <!-- Page Title with Export Button -->
       <div class="mb-8 md:mb-12 flex items-center gap-4">
         <div>
-          <h1 class="font-semibold text-[32px] text-[#FAFAFA] leading-normal">Resume</h1>
+          <h1 class="font-semibold text-[32px] text-[#FAFAFA] leading-normal">
+            Resume
+          </h1>
           <div
             class="h-1 w-12 md:w-16 mt-2 rounded"
             style="background: linear-gradient(90deg, #ffda6f, #ffbc5c)"
@@ -48,7 +50,11 @@
         </h2>
 
         <div class="space-y-0">
-          <ResumeCard v-for="item in experience" :key="item.title" :item="item" />
+          <ResumeCard
+            v-for="item in experience"
+            :key="item.title"
+            :item="item"
+          />
         </div>
       </section>
 
@@ -61,14 +67,20 @@
             class="w-[46px] h-[46px] flex items-center justify-center bg-[#202022] rounded-xl border-[#555555]"
             style="box-shadow: 0 0 12px rgba(0, 0, 0, 0.3)"
           >
-            <i class="fas fa-graduation-cap text-[rgb(255,219,112)] text-sm"></i>
+            <i
+              class="fas fa-graduation-cap text-[rgb(255,219,112)] text-sm"
+            ></i>
           </span>
           Education
         </h2>
 
         <!-- Timeline -->
         <div class="space-y-0">
-          <ResumeCard v-for="item in education" :key="item.title" :item="item" />
+          <ResumeCard
+            v-for="item in education"
+            :key="item.title"
+            :item="item"
+          />
         </div>
       </section>
     </div>
@@ -95,7 +107,9 @@ const getDuration = (startDate) => {
   const now = new Date();
 
   let months =
-    (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth()) + 1 ;
+    (now.getFullYear() - start.getFullYear()) * 12 +
+    (now.getMonth() - start.getMonth()) +
+    1;
 
   const years = Math.floor(months / 12);
   const remainingMonths = months % 12;
@@ -128,8 +142,14 @@ const education = [
 
 const experience = [
   {
+    title: "Software Engineer @ Sambar Lab Ph",
+    date: `${formatMonthYear("2026-04-01")} — Present · ${getDuration("2026-04-01")}`,
+    description:
+      "Developing and maintaining systems deployed on cloud infrastructure using AWS. Working with AI integration, Docker containerization, and modern DevOps practices to build scalable and reliable software solutions. Collaborates closely with cross-functional teams to deliver high-quality features and ensure system performance, security, and availability.",
+  },
+  {
     title: "System Developer @ Fujitsu",
-    date: `${formatMonthYear("2024-06-01")} — Present · ${getDuration("2024-06-01")}`,
+    date: `${formatMonthYear("2024-06-01")} — March 2026 · 1 yr 10 mos`,
     description:
       "Developing and maintaining manufacturing and business systems, analyzing technical requirements, coding and testing, troubleshooting issues, maintaining databases and system documentation, providing technical support and end-user training, and ensuring system security and performance. Also supports IT improvements, system upgrades, and compliance with QMS, EMS, CSR, and safety regulations.",
     logo: "/vincent-portfolio/assets/fujitsu.png",
@@ -141,11 +161,11 @@ const experience = [
     description:
       "Handled SAP front-end troubleshooting by managing and resolving incidents through ServiceNow, documenting solutions for future reference, and creating accurate incident reports. Leveraged artificial intelligence, machine learning, and available self-service tools to quickly find relevant answers and resolve issues independently, while also utilizing real-time support channels for direct access to SAP experts.",
   },
-  {
-    title: "Internship @ Hacktiv Colab Inc.",
-    date: "Jan 2023 — April 2023 · 4 mos",
-    description:
-      "Worked on the Microsoft Power Platform, primarily developing and customizing solutions using Power Apps. Assisted in building applications to streamline business processes, automate workflows, and enhance overall productivity during the 4-month internship.",
-  },
+  // {
+  //   title: "Internship @ Hacktiv Colab Inc.",
+  //   date: "Jan 2023 — April 2023 · 4 mos",
+  //   description:
+  //     "Worked on the Microsoft Power Platform, primarily developing and customizing solutions using Power Apps. Assisted in building applications to streamline business processes, automate workflows, and enhance overall productivity during the 4-month internship.",
+  // },
 ];
 </script>
