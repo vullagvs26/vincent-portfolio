@@ -339,15 +339,37 @@
 </template>
 
 <script setup>
-import { computed, ref } from "vue";
-import ServiceCard from "../components/ServiceCard.vue";
-import TopNav from "../components/TopNav.vue";
-import BottomNav from "../components/BottomNav.vue";
+import vscode from "@/assets/my-tools/vscode.png";
+import html from "@/assets/my-tools/html.png";
+import css from "@/assets/my-tools/css3.jpg";
+import javascript from "@/assets/my-tools/javascript.png";
+import vue from "@/assets/my-tools/vue.png";
+import tailwind from "@/assets/my-tools/tailwind.png";
+import figma from "@/assets/my-tools/figma.png";
+import git from "@/assets/my-tools/git.png";
+import php from "@/assets/my-tools/php.png";
+import laravel from "@/assets/my-tools/laravel.png";
+import mysql from "@/assets/my-tools/mysql.png";
+import postgre from "@/assets/my-tools/postgre.png";
+import oracle from "@/assets/my-tools/oracle.png";
+import premierePro from "@/assets/my-tools/premiere-pro.png";
+import photoshop from "@/assets/my-tools/photoshop.png";
+import sonyvegas from "@/assets/my-tools/sonyvegas.png";
+import youtube from "@/assets/my-tools/youtube.png";
+import { ref, computed } from "vue";
+
+import { defineAsyncComponent } from "vue";
+
+const TopNav = defineAsyncComponent(() => import("../components/TopNav.vue"));
+const BottomNav = defineAsyncComponent(() => import("../components/BottomNav.vue"));
+const ServiceCard = defineAsyncComponent(() => import("../components/ServiceCard.vue"));
+
 import udemyCertificate from "../assets/certificates/Udemy.png";
 import splunkCertificate1 from "../assets/certificates/splunk1.png";
 import splunkCertificate2 from "../assets/certificates/splunk2.png";
 import splunkCertificate3 from "../assets/certificates/splunk3.png";
 import splunkCertificate4 from "../assets/certificates/japan.JPEG";
+
 
 const certificates = [
   {
@@ -459,27 +481,27 @@ const activeModal = computed(() => {
 });
 
 const tools = [
-  { img: "/vincent-portfolio/assets/my-tools/vscode.png" },
-  { img: "/vincent-portfolio/assets/my-tools/html.png" },
-  { img: "/vincent-portfolio/assets/my-tools/css3.jpg" },
-  { img: "/vincent-portfolio/assets/my-tools/javascript.png" },
-  { img: "/vincent-portfolio/assets/my-tools/vuejs.png" },
-  { img: "/vincent-portfolio/assets/my-tools/react.png" },
-  { img: "/vincent-portfolio/assets/my-tools/vue.png" },
-  { img: "/vincent-portfolio/assets/my-tools/tailwind.png" },
-  { img: "/vincent-portfolio/assets/my-tools/figma.png" },
-  { img: "/vincent-portfolio/assets/my-tools/git.png" },
-  { img: "/vincent-portfolio/assets/my-tools/docker.png" },
-  { img: "/vincent-portfolio/assets/my-tools/aws.png" },
-  { img: "/vincent-portfolio/assets/my-tools/php.png" },
-  { img: "/vincent-portfolio/assets/my-tools/laravel.png" },
-  { img: "/vincent-portfolio/assets/my-tools/mysql.png" },
-  { img: "/vincent-portfolio/assets/my-tools/postgre.png" },
-  { img: "/vincent-portfolio/assets/my-tools/oracle.png" },
-  { img: "/vincent-portfolio/assets/my-tools/splunk.png" },
-  { img: "/vincent-portfolio/assets/my-tools/premiere-pro.png" },
-  { img: "/vincent-portfolio/assets/my-tools/photoshop.png" },
-  { img: "/vincent-portfolio/assets/my-tools/sonyvegas.png" },
-  { img: "/vincent-portfolio/assets/my-tools/youtube.png" },
+  { img: vscode },
+  { img: html },
+  { img: css },
+  { img: javascript },
+  { img: "/assets/my-tools/vuejs.png" },
+  { img: "/assets/my-tools/react.png" },
+  { img: vue },
+  { img: tailwind },
+  { img: figma },
+  { img: git },
+  { img: "/assets/my-tools/docker.png" },
+  { img: "/assets/my-tools/aws.png" },
+  { img: php },
+  { img: laravel },
+  { img: mysql },
+  { img: postgre },
+  { img: oracle },
+  { img: "/assets/my-tools/splunk.png" },
+  { img: premierePro },
+  { img: photoshop },
+  { img: sonyvegas },
+  { img: youtube },
 ];
 </script>
