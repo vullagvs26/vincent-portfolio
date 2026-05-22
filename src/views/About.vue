@@ -365,6 +365,7 @@ const BottomNav = defineAsyncComponent(() => import("../components/BottomNav.vue
 const ServiceCard = defineAsyncComponent(() => import("../components/ServiceCard.vue"));
 
 import udemyCertificate from "../assets/certificates/Udemy.png";
+import splunkCertificate0 from "../assets/certificates/splunk0.png";
 import splunkCertificate1 from "../assets/certificates/splunk1.png";
 import splunkCertificate2 from "../assets/certificates/splunk2.png";
 import splunkCertificate3 from "../assets/certificates/splunk3.png";
@@ -388,6 +389,7 @@ const certificates = [
     description:
       "In 2024, while working as a Developer at Fujitsu, I was selected to train in Japan for Splunk and data analysis. The goal was to support the planned implementation at Fujitsu Philippines and help build dashboards for warehouse and inventory monitoring.",
     images: [
+      splunkCertificate0,
       splunkCertificate1,
       splunkCertificate2,
       splunkCertificate3,
