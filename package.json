@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "deply": "npm run deploy"
   },
   "dependencies": {
     "@primeuix/themes": "^1.2.5",

@@ -218,6 +218,9 @@ import { ref, computed, onMounted, onUnmounted } from "vue";
 import TopNav from "../components/TopNav.vue";
 import BottomNav from "../components/BottomNav.vue";
 
+const projectImage = (fileName) =>
+  new URL(`../assets/projects/${fileName}`, import.meta.url).href;
+
 const activeCategory = ref("All");
 const selectedProject = ref(null);
 const currentImageIndex = ref(0);
@@ -242,7 +245,7 @@ const projects = [
     title: "Hulma Aesthetic Studio",
     category: "Web Development",
     date: "February 21, 2025",
-    image: "/assets/projects/hulma1.png",
+    image: projectImage("hulma1.png"),
     link: "https://hulma.netlify.app",
     codeLink: "https://github.com/vullagvs26/HULMA",
     description:
@@ -254,7 +257,7 @@ const projects = [
     title: "Line Out System",
     category: "Web Development",
     date: "August 8, 2025",
-    image: "/assets/projects/los.png",
+    image: projectImage("los.png"),
     link: "#",
     codeLink: "#",
     description:
@@ -278,7 +281,7 @@ const projects = [
     title: "Tindog",
     category: "Web Development",
     date: "3 years ago",
-    image: "/assets/projects/tindog.png",
+    image: projectImage("tindog.png"),
     link: "https://vullagvs26.github.io/tindogChallenge/",
     codeLink: "https://github.com/vullagvs26/tindogChallenge",
     description:
@@ -290,7 +293,7 @@ const projects = [
     title: "Helpdesk System Prototype",
     category: "Web Design",
     date: "Last Year",
-    image: "/assets/projects/helpdesk.png",
+    image: projectImage("helpdesk.png"),
     link:
       "https://www.figma.com/design/CenOoqKCUVlM97YCxgYrKZ/Helpdesk?node-id=0-1&t=fs1PrZ7M7BClGiux-1",
     codeLink: "https://github.com/vullagvs26/helpdesk-system",
@@ -311,7 +314,7 @@ const projects = [
     title: "Hulma Prototype",
     category: "Web Design",
     date: "March 1, 2025",
-    image: "/assets/projects/hulma.png",
+    image: projectImage("hulma.png"),
     link:
       "https://www.figma.com/design/1q7vRuuOT1CJuUBv7QBXOQ/HULMA?node-id=0-1&t=Dl1aRlfefaobgw8k-1",
     codeLink: "#",
@@ -324,7 +327,7 @@ const projects = [
     title: "Line Out System",
     category: "Web Design",
     date: "March 30, 2023",
-    image: "/assets/projects/lineoutsystem.png",
+    image: projectImage("lineoutsystem.png"),
     link:
       "https://www.figma.com/design/hVF3mD1m6oMZPJFXxiGXlj/LOSv2?node-id=0-1&t=bm3bkIl6yAUmgB1E-1",
     codeLink: "#",
@@ -337,12 +340,12 @@ const projects = [
     title: "Splunk Dashboards",
     category: "Data Analytics",
     date: "January 15, 2025",
-    image: "/assets/projects/splunk1.png",
+    image: projectImage("splunk1.png"),
     images: [
-      "/assets/projects/splunk1.png",
-      "/assets/projects/splunk2.png",
-      "/assets/projects/splunk3.png",
-      "/assets/projects/splunk4.png",
+      projectImage("splunk1.png"),
+      projectImage("splunk2.png"),
+      projectImage("splunk3.png"),
+      projectImage("splunk4.png"),
     ],
     description:
     "Built and maintained interactive Splunk dashboards for warehouse and manufacturing systems to monitor operational performance, productivity, and process status. Designed data visualizations to analyze worker activities, machine states, and time-based metrics, transforming raw log data into actionable insights. The dashboards support decision-making by providing clear, real-time views of key KPIs, trends, and system behavior across production and warehouse operations.",
@@ -360,12 +363,12 @@ const projects = [
     title: "ToDoList - Vue-Auth-Supabase",
     category: "Web Development",
     date: "December 18, 2025",
-    image: "/assets/projects/todo2.png",
+    image: projectImage("todo2.png"),
     images: [
-      "/assets/projects/todo1.png",
-      "/assets/projects/todo2.png",
-      "/assets/projects/todo3.png",
-      "/assets/projects/todo4.png",
+      projectImage("todo1.png"),
+      projectImage("todo2.png"),
+      projectImage("todo3.png"),
+      projectImage("todo4.png"),
     ],
     link:
       "https://to-do-list-hazel-five-76.vercel.app",
