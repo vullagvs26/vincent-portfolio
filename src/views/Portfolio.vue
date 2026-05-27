@@ -218,8 +218,14 @@ import { ref, computed, onMounted, onUnmounted } from "vue";
 import TopNav from "../components/TopNav.vue";
 import BottomNav from "../components/BottomNav.vue";
 
+const projectImageMap = import.meta.glob("../assets/projects/*", {
+  eager: true,
+  import: "default",
+});
+
 const projectImage = (fileName) =>
-  new URL(`../assets/projects/${fileName}`, import.meta.url).href;
+  projectImageMap[`../assets/projects/${fileName}`] ??
+  `${import.meta.env.BASE_URL}assets/projects/${fileName}`;
 
 const activeCategory = ref("All");
 const selectedProject = ref(null);
