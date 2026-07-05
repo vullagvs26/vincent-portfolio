@@ -354,7 +354,7 @@ const projects = [
       projectImage("splunk4.png"),
     ],
     description:
-    "Built and maintained interactive Splunk dashboards for warehouse and manufacturing systems to monitor operational performance, productivity, and process status. Designed data visualizations to analyze worker activities, machine states, and time-based metrics, transforming raw log data into actionable insights. The dashboards support decision-making by providing clear, real-time views of key KPIs, trends, and system behavior across production and warehouse operations.",
+      "Built and maintained interactive Splunk dashboards for warehouse and manufacturing systems to monitor operational performance, productivity, and process status. Designed data visualizations to analyze worker activities, machine states, and time-based metrics, transforming raw log data into actionable insights. The dashboards support decision-making by providing clear, real-time views of key KPIs, trends, and system behavior across production and warehouse operations.",
     technologies: [
       "SPLUNK",
       "XML",
@@ -366,6 +366,33 @@ const projects = [
   },
   {
     id: 8,
+    title: "Expense Tracker",
+    category: "Mobile App Development",
+    date: "July 07, 2026",
+    image: projectImage("mobile3.png"),
+    images: [
+      projectImage("mobile1.png"),
+      projectImage("mobile2.png"),
+      projectImage("mobile3.png"),
+      projectImage("mobile4.png"),
+      projectImage("mobile5.png"),
+      projectImage("firebase1.png"),
+    ],
+    link: "",
+    codeLink: "https://github.com/vullagvs26/expense-tracker",
+    description:
+      "A personal expense tracking mobile application built with React Native, Expo, and Firebase. It enables users to record income and expenses, categorize transactions, monitor spending habits, and securely synchronize data in real time through Firebase.",
+    technologies: [
+      "React Native",
+      "Expo",
+      "Firebase",
+      "JavaScript",
+      "Firestore",
+      "Firebase Authentication",
+    ],
+  },
+  {
+    id: 9,
     title: "ToDoList - Vue-Auth-Supabase",
     category: "Web Development",
     date: "December 18, 2025",
@@ -376,11 +403,10 @@ const projects = [
       projectImage("todo3.png"),
       projectImage("todo4.png"),
     ],
-    link:
-      "https://to-do-list-hazel-five-76.vercel.app",
+    link: "https://to-do-list-hazel-five-76.vercel.app",
     codeLink: "https://github.com/vullagvs26/To-Do-List",
     description:
-    "A full-featured todo management application built with Vue 3, Vite, and Supabase. This modern web app combines user authentication, comprehensive task management, data visualization, and a beautiful dark mode experience.",
+      "A full-featured todo management application built with Vue 3, Vite, and Supabase. This modern web app combines user authentication, comprehensive task management, data visualization, and a beautiful dark mode experience.",
     technologies: [
       "Chart.js",
       "Vue.js",

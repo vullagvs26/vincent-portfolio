@@ -12,9 +12,7 @@
     >
       <!-- Title -->
       <div class="mb-6 md:mb-6">
-        <h1 class="font-semibold text-[32px] text-[#FAFAFA] leading-normal">
-          About
-        </h1>
+        <h1 class="font-semibold text-[32px] text-[#FAFAFA] leading-normal">About</h1>
         <div
           class="h-1 w-12 md:w-16 mt-2 rounded"
           style="background: linear-gradient(90deg, #ffda6f, #ffbc5c)"
@@ -24,24 +22,22 @@
       <!-- About Content -->
       <section class="max-w-4xl mb-4 md:mb-4">
         <p class="text-[15px] font-light text-[#D6D6D6] leading-6 mb-4 md:mb-4">
-          Hello! I'm Vincent Vullag, a passionate Web Developer from Philippines
-          with expertise in Vue.js, Tailwind CSS, and modern web technologies. I
-          love creating beautiful and functional user interfaces.
+          Hello! I'm Vincent Vullag, a passionate Web Developer from Philippines with
+          expertise in Vue.js, Tailwind CSS, and modern web technologies. I love creating
+          beautiful and functional user interfaces.
         </p>
 
         <p class="text-[15px] font-light text-[#D6D6D6] leading-6 mb-4 md:mb-6">
           With a background in Computer Science and hands-on experience in web
-          development, I'm committed to building high-quality applications that
-          solve real problems. When I'm not coding, you can find me exploring
-          new technologies or doing some video for youtube.
+          development, I'm committed to building high-quality applications that solve real
+          problems. When I'm not coding, you can find me exploring new technologies or
+          doing some video for youtube.
         </p>
       </section>
 
       <!-- What I'm Doing Section -->
       <section class="mb-12 md:mb-12">
-        <h2
-          class="font-semibold text-[24px] text-[#FAFAFA] leading-normal mb-6 md:mb-8"
-        >
+        <h2 class="font-semibold text-[24px] text-[#FAFAFA] leading-normal mb-6 md:mb-8">
           What I'm Doing
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
@@ -56,31 +52,27 @@
             description="High-quality development of sites at the professional level."
           />
           <ServiceCard
-            icon="fa-mobile-alt"
-            title="Virtual Assistant"
-            description="Providing administrative support, scheduling, and task management to streamline your workflow."
+            icon="fa-mobile-screen-button"
+            title="Mobile App Development"
+            description="Developing cross-platform mobile applications with clean UI, smooth performance, and seamless user experiences for Android and iOS."
           />
           <ServiceCard
-            icon="fa-camera"
-            title="YouTube Automation"
-            description="Automating video uploads, scheduling, and channel management to grow your YouTube presence efficiently."
+            icon="fa-server"
+            title="DevOps"
+            description="Automating deployments, managing cloud infrastructure, and optimizing CI/CD pipelines for reliable and scalable applications."
           />
         </div>
       </section>
 
       <!-- Certificates -->
       <section class="mb-12 md:mb-12">
-        <h2
-          class="font-semibold text-[24px] text-[#FAFAFA] leading-normal mb-6 md:mb-8"
-        >
+        <h2 class="font-semibold text-[24px] text-[#FAFAFA] leading-normal mb-6 md:mb-8">
           Certificates
         </h2>
 
-        <p
-          class="text-[15px] font-light text-[#D6D6D6] leading-6 mb-6 md:mb-8 max-w-3xl"
-        >
-          A selection of certifications and training highlights from my
-          professional journey.
+        <p class="text-[15px] font-light text-[#D6D6D6] leading-6 mb-6 md:mb-8 max-w-3xl">
+          A selection of certifications and training highlights from my professional
+          journey.
         </p>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6">
@@ -99,9 +91,7 @@
                 @click="openCertificateModal(certificateIndex)"
               >
                 <img
-                  :src="
-                    getActiveCertificateImage(certificate, certificateIndex)
-                  "
+                  :src="getActiveCertificateImage(certificate, certificateIndex)"
                   :alt="certificate.title"
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
@@ -115,9 +105,9 @@
                     v-if="getCertificateImages(certificate).length > 1"
                     class="rounded-full border border-white/20 bg-black/35 px-3 py-1 text-[12px] text-[#FAFAFA]"
                   >
-                    {{
-                      (certificateImageIndexes[certificateIndex] ?? 0) + 1
-                    }}/{{ getCertificateImages(certificate).length }}
+                    {{ (certificateImageIndexes[certificateIndex] ?? 0) + 1 }}/{{
+                      getCertificateImages(certificate).length
+                    }}
                   </span>
                 </div>
               </button>
@@ -130,8 +120,8 @@
                     Certificate preview
                   </p>
                   <p class="mt-2 text-[13px] leading-6 text-[#B8B8B8]">
-                    Add your certificate image path in the data below to show
-                    the actual picture.
+                    Add your certificate image path in the data below to show the actual
+                    picture.
                   </p>
                 </div>
               </div>
@@ -143,18 +133,14 @@
                 <button
                   type="button"
                   class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-black/45 text-[#FAFAFA] transition hover:bg-black/65"
-                  @click.stop="
-                    changeCertificateImage(certificateIndex, -1, certificate)
-                  "
+                  @click.stop="changeCertificateImage(certificateIndex, -1, certificate)"
                 >
                   <i class="fas fa-chevron-left text-[12px]"></i>
                 </button>
                 <button
                   type="button"
                   class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-black/45 text-[#FAFAFA] transition hover:bg-black/65"
-                  @click.stop="
-                    changeCertificateImage(certificateIndex, 1, certificate)
-                  "
+                  @click.stop="changeCertificateImage(certificateIndex, 1, certificate)"
                 >
                   <i class="fas fa-chevron-right text-[12px]"></i>
                 </button>
@@ -187,15 +173,12 @@
                 class="mb-4 flex flex-wrap gap-2"
               >
                 <button
-                  v-for="(image, imageIndex) in getCertificateImages(
-                    certificate,
-                  )"
+                  v-for="(image, imageIndex) in getCertificateImages(certificate)"
                   :key="`${certificate.title}-${imageIndex}`"
                   type="button"
                   class="h-14 w-20 overflow-hidden rounded-lg border transition"
                   :class="
-                    (certificateImageIndexes[certificateIndex] ?? 0) ===
-                    imageIndex
+                    (certificateImageIndexes[certificateIndex] ?? 0) === imageIndex
                       ? 'border-[#ffdb70]'
                       : 'border-[#3b3b3d] hover:border-[#6b6b6d]'
                   "
@@ -226,23 +209,13 @@
 
       <!-- My Tools -->
       <section>
-        <h2
-          class="font-semibold text-[24px] text-[#FAFAFA] leading-normal mb-6 md:mb-8"
-        >
+        <h2 class="font-semibold text-[24px] text-[#FAFAFA] leading-normal mb-6 md:mb-8">
           My Tools
         </h2>
 
         <div class="flex flex-wrap gap-4 text-gray-300">
-          <div
-            v-for="tool in tools"
-            :key="tool.name"
-            class="flex flex-col items-center"
-          >
-            <img
-              :src="tool.img"
-              alt=""
-              class="h-12 md:h-16 w-auto object-contain"
-            />
+          <div v-for="tool in tools" :key="tool.name" class="flex flex-col items-center">
+            <img :src="tool.img" alt="" class="h-12 md:h-16 w-auto object-contain" />
           </div>
         </div>
       </section>
@@ -310,10 +283,7 @@
           </div>
         </div>
 
-        <div
-          class="mt-4 flex flex-wrap gap-2"
-          v-if="activeModal.images.length > 1"
-        >
+        <div class="mt-4 flex flex-wrap gap-2" v-if="activeModal.images.length > 1">
           <button
             v-for="(image, imageIndex) in activeModal.images"
             :key="`${activeModal.certificate.title}-modal-${imageIndex}`"
@@ -370,7 +340,6 @@ import splunkCertificate1 from "../assets/certificates/splunk1.png";
 import splunkCertificate2 from "../assets/certificates/splunk2.png";
 import splunkCertificate3 from "../assets/certificates/splunk3.png";
 import splunkCertificate4 from "../assets/certificates/japan.JPEG";
-
 
 const certificates = [
   {
@@ -461,8 +430,7 @@ const changeModalImage = (direction) => {
   const certificate = certificates[activeModalState.value.certificateIndex];
   const images = getCertificateImages(certificate);
   const nextIndex =
-    (activeModalState.value.imageIndex + direction + images.length) %
-    images.length;
+    (activeModalState.value.imageIndex + direction + images.length) % images.length;
 
   setModalImage(nextIndex);
 };
