@@ -378,7 +378,7 @@ const projects = [
       projectImage("mobile5.png"),
       projectImage("firebase1.png"),
     ],
-    link: "",
+    link: "https://expo.dev/accounts/enteng/projects/expense-tracker2/builds/44c38da7-d26d-4f61-a91e-e9caf63e9c27",
     codeLink: "https://github.com/vullagvs26/expense-tracker",
     description:
       "A personal expense tracking mobile application built with React Native, Expo, and Firebase. It enables users to record income and expenses, categorize transactions, monitor spending habits, and securely synchronize data in real time through Firebase.",
